@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 21:17:33 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/02 22:36:39 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:29:38 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/13 01:41:06 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	*ft_memcpy(void	*dest, const void *src, size_t n)
 	unsigned char	*src_ptr;
 	size_t			i;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
+	if (n == 0)
+		return (dest);
 	dest_ptr = (unsigned char *)dest;
 	src_ptr = (unsigned char *)src;
 	i = 0;

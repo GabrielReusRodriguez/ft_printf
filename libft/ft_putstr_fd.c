@@ -5,17 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/04 00:42:24 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 00:56:20 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:31:02 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/12 00:07:09 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s != '\0')
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		write(fd, s, 1);
+		ft_putchar_fd(s[i], fd);
+		i++;
 	}
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 23:54:27 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 00:47:28 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:31:28 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/13 02:35:59 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,11 @@ char	*ft_strdup(const char *s)
 {
 	char	*ptr;
 	size_t	size;
-	size_t	i;
 
 	size = ft_strlen(s);
-	ptr = (char *)malloc(size);
+	ptr = (char *)malloc(size + 1);
 	if (ptr == NULL)
 		return (NULL);
-	while (i < size)
-	{
-		ptr[i] = s[i];
-		i++;
-	}
+	ft_strlcpy(ptr, s, size + 1);
 	return (ptr);
 }

@@ -5,64 +5,62 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 21:56:51 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/08 23:52:38 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 17:57:30 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 01:31:10 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdarg.h>
+#include <stddef.h>
 #include "../libft/libft.h"
+#include "ft_printf.h"
 
-static int	ft_print_special(char const *str, size_t pos_char, va_list ap)
+static int ft_print_special_char(char c, va_list argp)
 {
-	int		num_bytes;
-
-	num_bytes = 0;
-	return (num_bytes);
+	if (c == 'c')
+		return (ft_printf_char(argp));
+	if (c == 's')
+		return (ft_printf_str(argp));
+	if (c == 'p')
+		return (ft_printf_ptr(argp));
+	if (c == 'd')
+		return (ft_printf_dec(argp));
+	if (c == 'i')
+		return (ft_printf_int(argp));
+	if (c == 'u')
+		return (ft_printf_usgn(argp));
+	if (c == 'x')
+		return (ft_printf_low_hex(argp));		
+	if (c == 'X')
+		return (ft_printf_up_hex(argp));		
+	if (c == '%')
+		return (ft_printf_percent());
+	return (0);
 }
 
-static int	ft_print_str(char const *str, va_list ap)
+int ft_printf(char const *str, ...)
 {
-	int				num_bytes;
-	size_t			i;
-
+	va_list argp;
+	int     num_bytes;
+	size_t  i;
+	
 	num_bytes = 0;
 	i = 0;
-	while (str[i] != '\0')
+	va_start(argp, str);
+	while(str[i] != '\0')
 	{
-		if (str[i] == '%')
+		if (str[i] != '%')
 		{
-			if (str[i + 1] == '%')			
-				ft_putchar_fd('%', 1);
-			else
-				num_bytes = num_bytes + ft_print_special(str, i, ap) - 1;
-			i++;
+			ft_putchar_fd(str[i],1);
+			num_bytes++;
 		}
 		else
-			ft_putchar_fd(str[i], 1);
+		{
+			num_bytes = num_bytes + ft_print_special_char(str[i + 1], argp);
+			i++;
+		}
 		i++;
-		num_bytes++;
 	}
+	va_end(argp);
 	return (num_bytes);
-}
-
-
-int	ft_printf(char const *str, ...)
-{
-	va_list	ap;
-	int	num_bytes_printed;
-
-	num_bytes_printed = 0;
-	va_start(ap, str);
-	va_end(ap);
-	return (num_bytes_printed);
-}
-
-
-
-
-int	main(void)
-{
-	return (0);
 }

@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/04 23:57:08 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/05 01:05:13 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:25:00 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/12 00:26:51 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*node;
 	t_list	*next;
 
-	node = *lst;
-	while (node != NULL)
+	if (*lst == NULL)
 	{
-		next = node->next;
-		(*del)(node->content);
-		free (node);
-		node = next;
+		*lst = new;
+		return ;
 	}
+	next = (*lst);
+	*lst = new;
+	new->next = next;
 }

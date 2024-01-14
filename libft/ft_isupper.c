@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 00:23:36 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/11 23:26:22 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/11 23:27:26 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/11 23:46:57 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_isupper(int c)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)malloc(nmemb * size);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:57 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/10 20:28:33 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/01/14 01:35:36 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_printf_int(va_list argp);
 int	ft_printf_usgn(va_list argp);
 int	ft_printf_low_hex(va_list argp);
 int	ft_printf_up_hex(va_list argp);
-int	ft_printf_hex(int arg, unsigned int up_case);
+int	ft_printf_hex(unsigned int arg, unsigned int up_case);
 int	ft_printf_percent();
 
 #endif

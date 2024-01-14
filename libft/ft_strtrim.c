@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/03 00:22:34 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/03 01:05:59 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:33:48 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/12 00:24:28 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	if (start == size)
 		return (ft_substr(s1, size, 1));
-	end = size - 1;
-	while (ft_char_in_set(s1[end], set) == 1 && end > 0)
+	end = size;
+	while (ft_char_in_set(s1[end - 1], set) == 1 && end > 0)
 		end--;
 	str_trim = ft_substr(s1, start, end - start);
 	return (str_trim);

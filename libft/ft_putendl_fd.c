@@ -5,18 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/04 00:44:11 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 00:56:42 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:30:41 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/12 00:06:52 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	while (*s != '\0')
-	{
-		write(fd, s, 1);
-	}
-	write(fd, "\n", 1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

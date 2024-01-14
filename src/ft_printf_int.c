@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_printf_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/04 01:10:15 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 01:41:10 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 00:47:41 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include <stdarg.h>
+#include "../libft/libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_printf_int(va_list argp)
 {
-	t_list	*node;
+	int		num_bytes;
+	int		arg_value;
+	char	*num;
 
-	node = malloc(sizeof(t_list));
-	if (node == NULL)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	num_bytes = 0;
+	arg_value = va_arg(argp, int);
+	num = ft_itoa(arg_value);
+	if (num != NULL)
+	{
+		num_bytes = ft_strlen(num);
+		ft_putstr_fd(num,1);
+	}
+	return (num_bytes);
 }

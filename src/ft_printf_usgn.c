@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_printf_usgn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/04 01:38:25 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 01:41:18 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 19:19:49 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 01:26:40 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include <stdarg.h>
+#include "../libft/libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	ft_printf_usgn(va_list argp)
 {
-	t_list	*next;
+	unsigned int	arg_value;
+	char			*ch_number;
+	int				num_bytes;
 
-	next = (*lst)->next;
-	*lst = new;
-	new->next = next;
+	arg_value = va_arg(argp,unsigned int);
+	ch_number = ft_utoa(arg_value);
+	num_bytes = ft_strlen(ch_number);
+	ft_putstr_fd(ch_number, 1);
+	return (num_bytes);
 }

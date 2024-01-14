@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_printf_dec.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 00:23:36 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/11 23:26:22 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 19:13:27 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 01:02:40 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include <stdarg.h>
+#include "ft_printf.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_printf_dec(va_list argp)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)malloc(nmemb * size);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	return (ft_printf_int(argp));
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 21:08:42 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 00:48:07 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:32:20 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/10 00:32:28 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while (*s != '\0')
-	{
+	while (s[len] != '\0')
 		len++;
-		s++;
-	}
 	return (len);
 }

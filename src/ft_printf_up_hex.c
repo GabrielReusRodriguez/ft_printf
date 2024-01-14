@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_printf_up_hex.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 00:23:36 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/11 23:26:22 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 19:19:46 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 01:35:53 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include <stdarg.h>
+#include "../libft/libft.h"
+#include "ft_printf.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_printf_up_hex(va_list argp)
 {
-	unsigned char	*ptr;
+	int				num_bytes;
+	unsigned int	arg;
 
-	ptr = (unsigned char *)malloc(nmemb * size);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	arg = va_arg(argp, unsigned int);
+	num_bytes = ft_printf_hex(arg, 1);
+	return (num_bytes);
 }

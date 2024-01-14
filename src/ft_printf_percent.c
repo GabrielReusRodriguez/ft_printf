@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_printf_percent.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/04 23:37:21 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 23:43:38 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 19:19:36 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 00:30:07 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "libft.h"
+#include <stdarg.h>
+#include "../libft/libft.h"
 
-int	ft_listsize(t_list *lst)
+int	ft_printf_percent()
 {
-	int	size;
-
-	size = 1;
-	while (lst->next != NULL)
-	{
-		size++;
-		lst = lst->next;
-	}
-	return (size);
+	ft_putchar_fd('%',1);
+	return (1);
 }

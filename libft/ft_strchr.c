@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 22:49:33 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 00:46:52 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:31:22 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/12 00:08:14 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	*string;
+	char	character;
 
 	string = (char *)s;
+	character = (char)c;
 	while (*string != '\0')
 	{
-		if (*string == c)
+		if (*string == character)
 			return (string);
 		string++;
 	}
+	if (*string == character)
+		return (string);
 	return (NULL);
 }

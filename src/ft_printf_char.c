@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_printf_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/04 23:44:25 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/05 00:43:00 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 19:04:23 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 00:30:31 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include <stdarg.h>
+#include "../libft/libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+/*
+va_arg pilla int pero NO acepta char como parametros.
+*/
+int ft_printf_char(va_list argp)
 {
-	t_list	*list;
+	char    c;
 
-	new->next = NULL;
-	if (*lst == NULL)
-	{
-		*lst = new;
-		return ;
-	}
-	list = *lst;
-	while (list->next != NULL)
-	{
-		list = list->next;
-	}
-	list->next = new;
+	c = va_arg(argp, int);
+	ft_putchar_fd(c,1);
+	return (1);
 }

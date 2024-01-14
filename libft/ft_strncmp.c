@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 22:57:29 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 00:48:15 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:33:14 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/12 00:23:20 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,22 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	int		cmp;
+	size_t			i;
+	unsigned char	*us1;
+	unsigned char	*us2;
+	int				cmp;
 
+	us1 = (unsigned char *)s1;
+	us2 = (unsigned char *)s2;
 	i = 0;
-	while (i < n && s1[i] != '\0' && s2[i] != '\0')
+	while (i < n && us1[i] != '\0' && us2[i] != '\0')
 	{
-		cmp = s1[i] - s2[i];
+		cmp = us1[i] - us2[i];
 		if (cmp != 0)
 			return (cmp);
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	if (i < n)
+		return (us1[i] - us2[i]);
+	return (0);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 22:09:55 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/04 00:48:41 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:32:06 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/12 00:22:31 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	else
 		return_size = src_size + size;
 	i = 0;
-	while (i + dst_size < size - 1 && *src != '\0')
+	if (size == 0)
+		return (return_size);
+	while (i + dst_size < size - 1 && src[i] != '\0')
 	{
 		dst[i + dst_size] = src[i];
 		i++;
