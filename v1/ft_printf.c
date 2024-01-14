@@ -6,7 +6,7 @@
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:30 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/14 22:43:55 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/01/14 22:20:05 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int ft_printf(char const *str, ...)
 {
 	va_list argp;
 	int     num_bytes;
-	int		printed_bytes;
 	size_t  i;
 	
 	num_bytes = 0;
@@ -51,14 +50,12 @@ int ft_printf(char const *str, ...)
 	while(str[i] != '\0')
 	{
 		if (str[i] != '%')
-			printed_bytes = ft_iputchar_fd(str[i],1);	
+			num_bytes = num_bytes + ft_iputchar_fd(str[i],1);
 		else
 		{
-			printed_bytes = ft_print_special_char(str[i + 1], argp);
+			num_bytes = num_bytes + ft_print_special_char(str[i + 1], argp);
 			i++;
 		}
-		if (printed_bytes >= 0)
-			num_bytes = num_bytes + printed_bytes;
 		i++;
 	}
 	va_end(argp);

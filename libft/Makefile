@@ -6,7 +6,7 @@
 #    By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/04 01:34:53 by greus-ro          #+#    #+#              #
-#    Updated: 2024/01/14 01:23:50 by greus-ro         ###   ########.fr        #
+#    Updated: 2024/01/14 22:14:43 by greus-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,42 +16,46 @@ CFLAGS=-Wall -Wextra -Werror -MMD -MP
 BIN_DIR=.
 SRC_DIR=.
 
-LIBFT_SRC_FILES=	ft_atoi.c		\
-					ft_bzero.c		\
-					ft_calloc.c		\
-					ft_isalnum.c	\
-					ft_isalpha.c	\
-					ft_isascii.c	\
-					ft_isdigit.c	\
-					ft_islower.c	\
-					ft_isupper.c	\
-					ft_isprint.c	\
-					ft_itoa.c		\
-					ft_memchr.c		\
-					ft_memcmp.c		\
-					ft_memcpy.c		\
-					ft_memmove.c	\
-					ft_memset.c		\
-					ft_putchar_fd.c	\
-					ft_putendl_fd.c	\
-					ft_putnbr_fd.c	\
-					ft_putstr_fd.c	\
-					ft_split.c		\
-					ft_strchr.c		\
-					ft_strdup.c		\
-					ft_striteri.c	\
-					ft_strjoin.c	\
-					ft_strlcat.c	\
-					ft_strlcpy.c	\
-					ft_strlen.c		\
-					ft_strmapi.c	\
-					ft_strncmp.c	\
-					ft_strnstr.c	\
-					ft_strrchr.c	\
-					ft_strtrim.c	\
-					ft_substr.c		\
-					ft_tolower.c	\
-					ft_toupper.c	\
+LIBFT_SRC_FILES=	ft_atoi.c			\
+					ft_bzero.c			\
+					ft_calloc.c			\
+					ft_iputchar_fd.c	\
+					ft_iputendl_fd.c	\
+					ft_iputnbr_fd.c		\
+					ft_iputstr_fd.c		\
+					ft_isalnum.c		\
+					ft_isalpha.c		\
+					ft_isascii.c		\
+					ft_isdigit.c		\
+					ft_islower.c		\
+					ft_isupper.c		\
+					ft_isprint.c		\
+					ft_itoa.c			\
+					ft_memchr.c			\
+					ft_memcmp.c			\
+					ft_memcpy.c			\
+					ft_memmove.c		\
+					ft_memset.c			\
+					ft_putchar_fd.c		\
+					ft_putendl_fd.c		\
+					ft_putnbr_fd.c		\
+					ft_putstr_fd.c		\
+					ft_split.c			\
+					ft_strchr.c			\
+					ft_strdup.c			\
+					ft_striteri.c		\
+					ft_strjoin.c		\
+					ft_strlcat.c		\
+					ft_strlcpy.c		\
+					ft_strlen.c			\
+					ft_strmapi.c		\
+					ft_strncmp.c		\
+					ft_strnstr.c		\
+					ft_strrchr.c		\
+					ft_strtrim.c		\
+					ft_substr.c			\
+					ft_tolower.c		\
+					ft_toupper.c		\
 					ft_utoa.c
 
 BONUS_SRC_FILES=	ft_lstadd_front_bonus.c	\

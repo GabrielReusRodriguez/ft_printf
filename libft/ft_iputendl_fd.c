@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_int.c                                    :+:      :+:    :+:   */
+/*   ft_iputendl_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/14 22:20:41 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:30:41 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 22:06:41 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include "../libft/libft.h"
+#include "libft.h"
 
-int	ft_printf_int(va_list argp)
+int	ft_iputendl_fd(char *s, int fd)
 {
-	int		num_bytes;
-	int		arg_value;
-	char	*num;
+	int	num_bytes_str;
+	int	num_bytes_nl;
+	int	num_bytes;
 
 	num_bytes = 0;
-	arg_value = va_arg(argp, int);
-	num = ft_itoa(arg_value);
-	if (num != NULL)
-	{
-		//num_bytes = ft_strlen(num);
-		num_bytes = ft_iputstr_fd(num,1);
-	}
+	num_bytes_str = ft_iputstr_fd(s, fd);
+	num_bytes_nl = ft_iputchar_fd('\n', fd);
+	if (num_bytes_str >= 0)
+		num_bytes = num_bytes_str;
+	if (num_bytes_nl >= 0)
+		num_bytes = num_bytes  + num_bytes_nl;
 	return (num_bytes);
 }

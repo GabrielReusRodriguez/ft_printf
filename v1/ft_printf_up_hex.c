@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_int.c                                    :+:      :+:    :+:   */
+/*   ft_printf_up_hex.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/14 22:20:41 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 19:19:46 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 01:35:53 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include "../libft/libft.h"
+#include "ft_printf.h"
 
-int	ft_printf_int(va_list argp)
+int	ft_printf_up_hex(va_list argp)
 {
-	int		num_bytes;
-	int		arg_value;
-	char	*num;
+	int				num_bytes;
+	unsigned int	arg;
 
-	num_bytes = 0;
-	arg_value = va_arg(argp, int);
-	num = ft_itoa(arg_value);
-	if (num != NULL)
-	{
-		//num_bytes = ft_strlen(num);
-		num_bytes = ft_iputstr_fd(num,1);
-	}
+	arg = va_arg(argp, unsigned int);
+	num_bytes = ft_printf_hex(arg, 1);
 	return (num_bytes);
 }

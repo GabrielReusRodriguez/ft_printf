@@ -6,12 +6,11 @@
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:29 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/14 01:36:07 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/01/14 22:48:18 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
-#include "../libft/libft.h"
 #include "ft_printf.h"
 
 /* Le paso un numero int y lo convierte a hex*/

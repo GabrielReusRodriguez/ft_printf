@@ -6,12 +6,11 @@
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:46 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/14 01:35:53 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/01/14 22:48:34 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
-#include "../libft/libft.h"
 #include "ft_printf.h"
 
 int	ft_printf_up_hex(va_list argp)

@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_int.c                                    :+:      :+:    :+:   */
+/*   ft_iputstr_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/14 22:20:41 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/01/10 00:31:02 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/14 22:38:18 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include "../libft/libft.h"
+#include "libft.h"
 
-int	ft_printf_int(va_list argp)
+int	ft_iputstr_fd(char *s, int fd)
 {
-	int		num_bytes;
-	int		arg_value;
-	char	*num;
+	size_t	i;
+	int		total_num_bytes;
+	int		char_num_bytes;
 
-	num_bytes = 0;
-	arg_value = va_arg(argp, int);
-	num = ft_itoa(arg_value);
-	if (num != NULL)
+	i = 0;
+	total_num_bytes = 0;
+	while (s[i] != '\0')
 	{
-		//num_bytes = ft_strlen(num);
-		num_bytes = ft_iputstr_fd(num,1);
+		char_num_bytes = ft_iputchar_fd(s[i], fd);
+		if (char_num_bytes >= 0)
+			total_num_bytes = total_num_bytes + char_num_bytes;
+		i++;
 	}
-	return (num_bytes);
+	return (total_num_bytes);
 }
