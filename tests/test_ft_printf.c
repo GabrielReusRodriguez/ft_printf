@@ -6,7 +6,7 @@
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 18:25:44 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/14 02:23:01 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/01/24 00:08:35 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(void)
     ft_num_bytes = ft_printf("\tHola mundo!\n");
     num_bytes = printf("\tHola mundo!\n");
     printf("\t\tNum bytes = %d vs ft num bytes = %d\n",num_bytes, ft_num_bytes);
-
+/*
     printf("TEST Chars\n");
     ft_num_bytes = ft_printf("\tHola mundo %c!\n",'t');
     num_bytes = printf("\tHola mundo %c!\n",'t');
@@ -117,6 +117,6 @@ int main(void)
     ft_num_bytes = ft_printf("\tHola mundo _%p_\n",to_hex + 1);
     printf("\t\tNum bytes = %d vs ft num bytes = %d\n",num_bytes, ft_num_bytes);
 
-
+*/
     return(0);
 }

@@ -1,0 +1,169 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf copy.c.old                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/10 17:57:30 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/01/25 20:17:58 by greus-ro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include "../libft/libft.h"
+#include "ft_printf.h"
+
+static int	ft_print_special_char(va_list argp, t_format *format)
+{
+	
+	int	num_bytes;
+
+	num_bytes = 0;
+	//printf("\t\tVALOR: %c\n",format->c_data_type);
+	if (format->c_data_type == 'c')
+		num_bytes = ft_printf_char(argp);
+	if (format->c_data_type == 's')
+		num_bytes = ft_printf_str(argp, format);
+	if (format->c_data_type == 'p')
+		num_bytes = ft_printf_ptr(argp);
+	if (format->c_data_type == 'd')
+		num_bytes = ft_printf_dec(argp, format);
+	if (format->c_data_type == 'i')
+		num_bytes = ft_printf_int(argp, format);
+	if (format->c_data_type == 'u')
+		num_bytes = ft_printf_usgn(argp, format);
+	if (format->c_data_type == 'x')
+		num_bytes = ft_printf_low_hex(argp, format);
+	if (format->c_data_type == 'X')
+		num_bytes = ft_printf_up_hex(argp, format);
+	if (format->c_data_type == '%')
+		num_bytes = ft_printf_percent();
+	return (num_bytes);
+	
+}
+
+static int	ft_special_char(char **str, va_list argp, int pos)
+{
+	t_format	*format;
+	int			num_bytes;
+	char		*init_str;
+	size_t		total_size;
+
+	init_str = *str;
+	total_size = ft_strlen(*str);
+	format = ft_printf_get_format(*(str + pos));
+	if(format == NULL)
+	{
+		return (-1);
+	}
+	num_bytes = ft_print_special_char(argp,format);
+	//printf("\n\n\n\t str _%s_ start %lu pos %d len : %lu \n", str, format->len, pos,total_size);
+	*str = ft_substr(init_str, pos + format->len, total_size - pos - format->len);
+	if(*str == NULL)
+	{
+		free(format);
+		return (-1);
+	}
+	free (init_str);
+	free (format);
+	return (num_bytes);
+	
+}
+
+/*
+//static char		*ft_special_char(char *str, va_list argp, int pos, int *num_bytes)
+{
+	t_format	*format;
+	//int			num_bytes;
+	char		*aux;
+	size_t		total_size;
+
+	total_size = ft_strlen(str);
+	format = ft_printf_get_format(str + pos);
+	if(format == NULL)
+	{
+		return (NULL);
+	}
+	argp = argp;
+	num_bytes = num_bytes;
+	*num_bytes = ft_print_special_char(argp,format);
+	//printf("\n\n\n\t str _%s_ start %lu pos %d len : %lu \n", str, format->len, pos,total_size);
+	aux = ft_substr(str, pos + format->len, total_size - pos - format->len);
+	if(aux == NULL)
+	{
+		free(format);
+		return (NULL);
+	}
+	free (str);
+	free (format);
+	return (aux);
+	
+}
+*/
+static int ft_printf_buffer(char *str, va_list argp)
+{
+	char	*string;
+	int		printed_bytes;
+	int 	num_bytes;
+	size_t	i;
+
+	string = ft_strdup(str);
+	if(string == NULL)
+		return (-1);
+	i = 0;
+	printed_bytes = 0;
+	while (string[i] != '\0')
+	{
+		if (string[i] != '%')
+			printed_bytes = ft_iputchar_fd(string[i], 1);
+		else
+		{
+			//string = ft_special_char(string, argp, i, &printed_bytes);
+			printed_bytes = ft_special_char(&string, argp, i);
+			if(string == NULL)
+			{
+				return (-1);
+			}
+			i = -1;
+		}
+		if(printed_bytes == -1)
+		{
+			free (string);
+			return (-1);
+		}
+		else
+			num_bytes = num_bytes + printed_bytes;
+		i++;
+	}
+	free (string);
+	return (num_bytes);
+}
+
+int	ft_printf(char const *str, ...)
+{
+	va_list	argp;
+	int		num_bytes;
+	//int		printed_bytes;
+	//size_t	i;
+
+	num_bytes = 0;
+	//i = 0;
+	va_start(argp, str);
+	num_bytes = ft_printf_buffer((char *)str, argp);
+	va_end(argp);
+	return (num_bytes);
+}
+/*
+int main(void)
+{
+	//ft_printf("Hola mundo !\n",5);
+	//ft_printf("Hola mundo %d !\n",5);
+	char *string ="";
+	//ft_printf("%s",string);
+	ft_printf("%c",'0');
+	return (0);
+}
+*/

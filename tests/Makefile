@@ -1,6 +1,6 @@
 BIN_DIR=./bin
 NAME= ${BIN_DIR}/test_ft_printf.out
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -g
 LIBFT_PRINTF=../libftprintf.a
 LIBFT=../libft/libft.a
 

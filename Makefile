@@ -1,6 +1,7 @@
 NAME=libftprintf.a
 CC=cc
-CFLAGS=-Wall -Wextra -Werror -MMD -MP
+CFLAGS=-Wall -Wextra -Werror -MMD -MP -g
+#CFLAGS= -g
 
 BIN_DIR=./bin
 SRC_DIR=./src

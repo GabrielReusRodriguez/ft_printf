@@ -1,0 +1,1400 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                Welcome to Francinette, a 42 tester framework!                ║
+╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝
+                        ║            printf            ║
+                        ╚══════════════════════════════╝
+⠋ Preparing framework⠙ Preparing framework✔ Preparing framework
+⠋ Executing: norminette⠙ Executing: norminette⠹ Executing: norminette⠸ Executing: norminette⠼ Executing: norminette⠴ Executing: norminette⠦ Executing: norminette✖ Executing: norminette
+src/ft_printf_char.c: OK!
+src/ft_printf_int.c: OK!
+src/ft_printf_format.c: Error!
+Error: LINE_TOO_LONG        (line:  37, col:   1):	line too long
+Error: WRONG_SCOPE_COMMENT  (line:  43, col:   5):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  50, col:   9):	Comment is invalid in this scope
+Error: SPACE_AFTER_KW       (line:  51, col:   9):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  51, col:  11):	Missing space before parenthesis (brace/bracket)
+Error: WRONG_SCOPE_COMMENT  (line:  53, col:  13):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  58, col:  13):	Comment is invalid in this scope
+Error: TOO_MANY_LINES       (line:  69, col:   1):	Function has more than 25 lines
+Error: SPACE_AFTER_KW       (line:  89, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  89, col:  10):	Missing space before parenthesis (brace/bracket)
+Error: SPC_AFTER_OPERATOR   (line:  92, col:  38):	missing space after operator
+src/ft_printf_usgn.c: OK!
+src/ft_printf_low_hex.c: OK!
+src/ft_printf.c: Error!
+Error: SPACE_EMPTY_LINE     (line:  22, col:   1):	Space on empty line
+Error: TOO_MANY_TABS_FUNC   (line:  46, col:  13):	extra tabs before function name
+Error: LINE_TOO_LONG        (line:  46, col:  82):	line too long
+Error: WRONG_SCOPE_COMMENT  (line:  49, col:   5):	Comment is invalid in this scope
+Error: VAR_DECL_START_FUNC  (line:  50, col:   1):	Variable declaration not at start of function
+Error: VAR_DECL_START_FUNC  (line:  51, col:   1):	Variable declaration not at start of function
+Error: SPACE_AFTER_KW       (line:  55, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  55, col:   7):	Missing space before parenthesis (brace/bracket)
+Error: SPC_AFTER_OPERATOR   (line:  57, col:  44):	missing space after operator
+Error: LINE_TOO_LONG        (line:  58, col:   1):	line too long
+Error: WRONG_SCOPE_COMMENT  (line:  58, col:   5):	Comment is invalid in this scope
+Error: LINE_TOO_LONG        (line:  58, col:  99):	line too long
+Error: SPACE_AFTER_KW       (line:  60, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  60, col:   7):	Missing space before parenthesis (brace/bracket)
+Error: EMPTY_LINE_FUNCTION  (line:  65, col:   1):	Empty line in function
+Error: SPACE_EMPTY_LINE     (line:  65, col:   1):	Space on empty line
+Error: SPACE_BEFORE_FUNC    (line:  68, col:  11):	space before function name
+Error: MIXED_SPACE_TAB      (line:  72, col:   8):	Mixed spaces and tabs
+Error: SPACE_REPLACE_TAB    (line:  72, col:   8):	Found space when expecting tab
+Error: WRONG_SCOPE_COMMENT  (line:  84, col:  13):	Comment is invalid in this scope
+Error: SPACE_AFTER_KW       (line:  87, col:   9):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  87, col:  11):	Missing space before parenthesis (brace/bracket)
+Error: TOO_MANY_LINES       (line:  98, col:   1):	Function has more than 25 lines
+Error: WRONG_SCOPE_COMMENT  (line: 104, col:   5):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line: 105, col:   5):	Comment is invalid in this scope
+Error: EMPTY_LINE_FUNCTION  (line: 106, col:   1):	Empty line in function
+Error: WRONG_SCOPE_COMMENT  (line: 108, col:   5):	Comment is invalid in this scope
+src/ft_printf_ptr.c: Error!
+Error: CONSECUTIVE_NEWLINES (line:  18, col:   1):	Consecutive newlines
+src/ft_printf_up_hex.c: OK!
+src/ft_printf.h: Error!
+Error: MISALIGNED_FUNC_DECL (line:  44, col:  14):	Misaligned function declaration
+src/ft_printf_dec.c: OK!
+src/ft_printf_hex.c: Error!
+Error: LINE_TOO_LONG        (line:  36, col:  82):	line too long
+src/ft_printf_percent.c: OK!
+src/ft_printf_str.c: Error!
+Error: SPACE_EMPTY_LINE     (line:  20, col:   1):	Space on empty line
+libft/ft_islower.c: OK!
+libft/ft_strdup.c: OK!
+libft/ft_isdigit.c: OK!
+libft/ft_strrchr.c: OK!
+libft/ft_putstr_fd.c: OK!
+libft/ft_tolower.c: OK!
+libft/ft_strnstr.c: OK!
+libft/ft_putchar_fd.c: OK!
+libft/ft_memmove.c: OK!
+libft/ft_memcpy.c: OK!
+libft/ft_calloc.c: OK!
+libft/ft_iputnbr_fd.c: OK!
+libft/ft_iputstr_fd.c: OK!
+libft/ft_isupper.c: OK!
+libft/ft_iputchar_fd.c: OK!
+libft/ft_lstclear_bonus.c: OK!
+libft/ft_strtrim.c: OK!
+libft/ft_memcmp.c: OK!
+libft/ft_strlen.c: OK!
+libft/ft_lstadd_back_bonus.c: OK!
+libft/ft_isascii.c: OK!
+libft/ft_lstadd_front_bonus.c: OK!
+libft/ft_strchr.c: OK!
+libft/ft_putendl_fd.c: OK!
+libft/ft_lstsize_bonus.c: OK!
+libft/ft_utoa.c: OK!
+libft/ft_substr.c: OK!
+libft/ft_strmapi.c: OK!
+libft/ft_lstnew_bonus.c: OK!
+libft/ft_atoi.c: OK!
+libft/ft_itoa.c: OK!
+libft/ft_memset.c: OK!
+libft/ft_bzero.c: OK!
+libft/ft_putnbr_fd.c: OK!
+libft/ft_toupper.c: OK!
+libft/ft_striteri.c: OK!
+libft/ft_isprint.c: OK!
+libft/ft_lstlast_bonus.c: OK!
+libft/ft_memchr.c: OK!
+libft/ft_lstiter_bonus.c: OK!
+libft/ft_split.c: OK!
+libft/ft_isalpha.c: OK!
+libft/ft_strjoin.c: OK!
+libft/ft_isalnum.c: OK!
+libft/ft_strlcpy.c: OK!
+libft/ft_strncmp.c: OK!
+libft/ft_iputendl_fd.c: OK!
+libft/libft.h: OK!
+libft/ft_strlcat.c: OK!
+libft/ft_lstmap_bonus.c: OK!
+libft/ft_lstdelone_bonus.c: OK!
+
+⠋ Executing: make fclean all (no bonus)⠙ Executing: make fclean all (no bonus)⠹ Executing: make fclean all (no bonus)⠸ Executing: make fclean all (no bonus)⠼ Executing: make fclean all (no bonus)✔ Executing: make fclean all (no bonus)
+ℹ Running tests: printfTester (https://github.com/Tripouille/printfTester)
+[36m[34m[Mandatory]
+[93mcategory: c[0m
+==27651== Conditional jump or move depends on uninitialised value(s)
+==27651==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27651==    by 0x10D359: void print<char>(char const*, char) (print.hpp:74)
+==27651==    by 0x10CD69: main (tests/c_test.cpp:26)
+==27651==  Uninitialised value was created by a stack allocation
+==27651==    at 0x10F525: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/c_test)
+==27651== 
+[32m1.OK ==27652== Conditional jump or move depends on uninitialised value(s)
+==27652==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27652==    by 0x10D359: void print<char>(char const*, char) (print.hpp:74)
+==27652==    by 0x10CD91: main (tests/c_test.cpp:27)
+==27652==  Uninitialised value was created by a stack allocation
+==27652==    at 0x10F525: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/c_test)
+==27652== 
+[32m2.OK ==27653== Conditional jump or move depends on uninitialised value(s)
+==27653==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27653==    by 0x10D944: void print<int>(char const*, int) (print.hpp:74)
+==27653==    by 0x10CDB9: main (tests/c_test.cpp:28)
+==27653==  Uninitialised value was created by a stack allocation
+==27653==    at 0x10F525: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/c_test)
+==27653== 
+[32m3.OK ==27655== Conditional jump or move depends on uninitialised value(s)
+==27655==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27655==    by 0x10D944: void print<int>(char const*, int) (print.hpp:74)
+==27655==    by 0x10CDE1: main (tests/c_test.cpp:29)
+==27655==  Uninitialised value was created by a stack allocation
+==27655==    at 0x10F525: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/c_test)
+==27655== 
+[32m4.OK ==27656== Conditional jump or move depends on uninitialised value(s)
+==27656==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27656==    by 0x10DF4F: void print<char, int, char>(char const*, char, int, char) (print.hpp:74)
+==27656==    by 0x10CE10: main (tests/c_test.cpp:30)
+==27656==  Uninitialised value was created by a stack allocation
+==27656==    at 0x10F525: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/c_test)
+==27656== 
+[32m5.OK ==27657== Conditional jump or move depends on uninitialised value(s)
+==27657==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27657==    by 0x10E563: void print<char, char, char>(char const*, char, char, char) (print.hpp:74)
+==27657==    by 0x10CE3C: main (tests/c_test.cpp:31)
+==27657==  Uninitialised value was created by a stack allocation
+==27657==    at 0x10F525: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/c_test)
+==27657== 
+[32m6.OK ==27658== Conditional jump or move depends on uninitialised value(s)
+==27658==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27658==    by 0x10E563: void print<char, char, char>(char const*, char, char, char) (print.hpp:74)
+==27658==    by 0x10CE6E: main (tests/c_test.cpp:32)
+==27658==  Uninitialised value was created by a stack allocation
+==27658==    at 0x10F525: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/c_test)
+==27658== 
+[32m7.OK ==27659== Conditional jump or move depends on uninitialised value(s)
+==27659==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27659==    by 0x10EB6F: void print<char, char, int>(char const*, char, char, int) (print.hpp:74)
+==27659==    by 0x10CE9D: main (tests/c_test.cpp:33)
+==27659==  Uninitialised value was created by a stack allocation
+==27659==    at 0x10F525: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/c_test)
+==27659== 
+[32m8.OK ==27660== Conditional jump or move depends on uninitialised value(s)
+==27660==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27660==    by 0x10F17E: void print<int, char, char>(char const*, int, char, char) (print.hpp:74)
+==27660==    by 0x10CECC: main (tests/c_test.cpp:34)
+==27660==  Uninitialised value was created by a stack allocation
+==27660==    at 0x10F525: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/c_test)
+==27660== 
+[32m9.OK [0m
+[93mcategory: s[0m
+==27669== Conditional jump or move depends on uninitialised value(s)
+==27669==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27669==    by 0x10D3A7: void print<char const*>(char const*, char const*) (print.hpp:74)
+==27669==    by 0x10CD76: main (tests/s_test.cpp:28)
+==27669==  Uninitialised value was created by a stack allocation
+==27669==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27669== 
+[32m1.OK ==27670== Conditional jump or move depends on uninitialised value(s)
+==27670==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27670==    by 0x10D3A7: void print<char const*>(char const*, char const*) (print.hpp:74)
+==27670==    by 0x10CDA0: main (tests/s_test.cpp:29)
+==27670==  Uninitialised value was created by a stack allocation
+==27670==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27670== 
+[32m2.OK ==27671== Conditional jump or move depends on uninitialised value(s)
+==27671==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27671==    by 0x10D3A7: void print<char const*>(char const*, char const*) (print.hpp:74)
+==27671==    by 0x10CDCA: main (tests/s_test.cpp:30)
+==27671==  Uninitialised value was created by a stack allocation
+==27671==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27671== 
+[32m3.OK ==27672== Conditional jump or move depends on uninitialised value(s)
+==27672==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27672==    by 0x10D3A7: void print<char const*>(char const*, char const*) (print.hpp:74)
+==27672==    by 0x10CDF4: main (tests/s_test.cpp:31)
+==27672==  Uninitialised value was created by a stack allocation
+==27672==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27672== 
+[32m4.OK ==27673== Conditional jump or move depends on uninitialised value(s)
+==27673==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27673==    by 0x10D3A7: void print<char const*>(char const*, char const*) (print.hpp:74)
+==27673==    by 0x10CE1E: main (tests/s_test.cpp:32)
+==27673==  Uninitialised value was created by a stack allocation
+==27673==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27673== 
+[32m5.OK ==27674== Conditional jump or move depends on uninitialised value(s)
+==27674==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27674==    by 0x10D9A3: void print<char const*, char const*>(char const*, char const*, char const*) (print.hpp:74)
+==27674==    by 0x10CE4F: main (tests/s_test.cpp:33)
+==27674==  Uninitialised value was created by a stack allocation
+==27674==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27674== 
+[32m6.OK ==27675== Conditional jump or move depends on uninitialised value(s)
+==27675==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27675==    by 0x10D9A3: void print<char const*, char const*>(char const*, char const*, char const*) (print.hpp:74)
+==27675==    by 0x10CE80: main (tests/s_test.cpp:34)
+==27675==  Uninitialised value was created by a stack allocation
+==27675==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27675== 
+[32m7.OK ==27676== Conditional jump or move depends on uninitialised value(s)
+==27676==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27676==    by 0x10DFC7: void print<char const*, char const*, char const*, char const*, char*>(char const*, char const*, char const*, char const*, char const*, char*) (print.hpp:74)
+==27676==    by 0x10CEBF: main (tests/s_test.cpp:35)
+==27676==  Uninitialised value was created by a stack allocation
+==27676==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27676== 
+[32m8.OK ==27677== Conditional jump or move depends on uninitialised value(s)
+==27677==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27677==    by 0x10E5E7: void print<char const*, char const*, char const*, char const*, char const*>(char const*, char const*, char const*, char const*, char const*, char const*) (print.hpp:74)
+==27677==    by 0x10CF01: main (tests/s_test.cpp:36)
+==27677==  Uninitialised value was created by a stack allocation
+==27677==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27677== 
+[32m9.OK ==27678== Conditional jump or move depends on uninitialised value(s)
+==27678==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27678==    by 0x10EBD7: void print<long>(char const*, long) (print.hpp:74)
+==27678==    by 0x10CF28: main (tests/s_test.cpp:37)
+==27678==  Uninitialised value was created by a stack allocation
+==27678==    at 0x10EF7E: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/s_test)
+==27678== 
+[32m10.OK [0m
+[93mcategory: p[0m
+==27690== Conditional jump or move depends on uninitialised value(s)
+==27690==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27690==    by 0x10D344: void print<int>(char const*, int) (print.hpp:74)
+==27690==    by 0x10CD69: main (tests/p_test.cpp:26)
+==27690==  Uninitialised value was created by a stack allocation
+==27690==    at 0x10E8EA: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/p_test)
+==27690== 
+[32m1.OK ==27691== Conditional jump or move depends on uninitialised value(s)
+==27691==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27691==    by 0x10D344: void print<int>(char const*, int) (print.hpp:74)
+==27691==    by 0x10CD91: main (tests/p_test.cpp:27)
+==27691==  Uninitialised value was created by a stack allocation
+==27691==    at 0x10E8EA: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/p_test)
+==27691== 
+[32m2.OK ==27692== Conditional jump or move depends on uninitialised value(s)
+==27692==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27692==    by 0x10D344: void print<int>(char const*, int) (print.hpp:74)
+==27692==    by 0x10CDB9: main (tests/p_test.cpp:28)
+==27692==  Uninitialised value was created by a stack allocation
+==27692==    at 0x10E8EA: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/p_test)
+==27692== 
+[32m3.OK ==27693== Conditional jump or move depends on uninitialised value(s)
+==27693==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27693==    by 0x10D344: void print<int>(char const*, int) (print.hpp:74)
+==27693==    by 0x10CDE1: main (tests/p_test.cpp:29)
+==27693==  Uninitialised value was created by a stack allocation
+==27693==    at 0x10E8EA: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/p_test)
+==27693== 
+[32m4.OK ==27697== Conditional jump or move depends on uninitialised value(s)
+==27697==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27697==    by 0x10D344: void print<int>(char const*, int) (print.hpp:74)
+==27697==    by 0x10CE09: main (tests/p_test.cpp:30)
+==27697==  Uninitialised value was created by a stack allocation
+==27697==    at 0x10E8EA: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/p_test)
+==27697== 
+[32m5.OK ==27698== Conditional jump or move depends on uninitialised value(s)
+==27698==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27698==    by 0x10D943: void print<long, long>(char const*, long, long) (print.hpp:74)
+==27698==    by 0x10CE40: main (tests/p_test.cpp:31)
+==27698==  Uninitialised value was created by a stack allocation
+==27698==    at 0x10E8EA: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/p_test)
+==27698== 
+[32m6.OK ==27699== Conditional jump or move depends on uninitialised value(s)
+==27699==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27699==    by 0x10DF3D: void print<int, int>(char const*, int, int) (print.hpp:74)
+==27699==    by 0x10CE6D: main (tests/p_test.cpp:32)
+==27699==  Uninitialised value was created by a stack allocation
+==27699==    at 0x10E8EA: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/p_test)
+==27699== 
+[32m7.OK ==27700== Conditional jump or move depends on uninitialised value(s)
+==27700==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27700==    by 0x10E543: void print<unsigned long, unsigned long>(char const*, unsigned long, unsigned long) (print.hpp:74)
+==27700==    by 0x10CE9C: main (tests/p_test.cpp:33)
+==27700==  Uninitialised value was created by a stack allocation
+==27700==    at 0x10E8EA: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/p_test)
+==27700== 
+[32m8.OK [31m9.KO [0m
+[93mcategory: d[0m
+==27713== Conditional jump or move depends on uninitialised value(s)
+==27713==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27713==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27713==    by 0x10CD66: main (tests/d_test.cpp:26)
+==27713==  Uninitialised value was created by a stack allocation
+==27713==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27713== 
+[32m1.OK ==27714== Conditional jump or move depends on uninitialised value(s)
+==27714==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27714==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27714==    by 0x10CD8E: main (tests/d_test.cpp:27)
+==27714==  Uninitialised value was created by a stack allocation
+==27714==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27714== 
+[32m2.OK ==27715== Conditional jump or move depends on uninitialised value(s)
+==27715==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27715==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27715==    by 0x10CDB6: main (tests/d_test.cpp:28)
+==27715==  Uninitialised value was created by a stack allocation
+==27715==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27715== 
+[32m3.OK ==27716== Conditional jump or move depends on uninitialised value(s)
+==27716==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27716==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27716==    by 0x10CDDE: main (tests/d_test.cpp:29)
+==27716==  Uninitialised value was created by a stack allocation
+==27716==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27716== 
+[32m4.OK ==27717== Conditional jump or move depends on uninitialised value(s)
+==27717==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27717==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27717==    by 0x10CE06: main (tests/d_test.cpp:30)
+==27717==  Uninitialised value was created by a stack allocation
+==27717==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27717== 
+[32m5.OK ==27718== Conditional jump or move depends on uninitialised value(s)
+==27718==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27718==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27718==    by 0x10CE2E: main (tests/d_test.cpp:31)
+==27718==  Uninitialised value was created by a stack allocation
+==27718==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27718== 
+[32m6.OK ==27719== Conditional jump or move depends on uninitialised value(s)
+==27719==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27719==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27719==    by 0x10CE56: main (tests/d_test.cpp:32)
+==27719==  Uninitialised value was created by a stack allocation
+==27719==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27719== 
+[32m7.OK ==27720== Conditional jump or move depends on uninitialised value(s)
+==27720==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27720==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27720==    by 0x10CE7E: main (tests/d_test.cpp:33)
+==27720==  Uninitialised value was created by a stack allocation
+==27720==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27720== 
+[32m8.OK ==27721== Conditional jump or move depends on uninitialised value(s)
+==27721==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27721==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27721==    by 0x10CEA6: main (tests/d_test.cpp:34)
+==27721==  Uninitialised value was created by a stack allocation
+==27721==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27721== 
+[32m9.OK ==27722== Conditional jump or move depends on uninitialised value(s)
+==27722==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27722==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27722==    by 0x10CECE: main (tests/d_test.cpp:35)
+==27722==  Uninitialised value was created by a stack allocation
+==27722==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27722== 
+[32m10.OK ==27723== Conditional jump or move depends on uninitialised value(s)
+==27723==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27723==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27723==    by 0x10CEF6: main (tests/d_test.cpp:36)
+==27723==  Uninitialised value was created by a stack allocation
+==27723==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27723== 
+[32m11.OK ==27724== Conditional jump or move depends on uninitialised value(s)
+==27724==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27724==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27724==    by 0x10CF1E: main (tests/d_test.cpp:37)
+==27724==  Uninitialised value was created by a stack allocation
+==27724==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27724== 
+[32m12.OK ==27725== Conditional jump or move depends on uninitialised value(s)
+==27725==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27725==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27725==    by 0x10CF46: main (tests/d_test.cpp:38)
+==27725==  Uninitialised value was created by a stack allocation
+==27725==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27725== 
+[32m13.OK ==27726== Conditional jump or move depends on uninitialised value(s)
+==27726==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27726==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27726==    by 0x10CF6E: main (tests/d_test.cpp:39)
+==27726==  Uninitialised value was created by a stack allocation
+==27726==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27726== 
+[32m14.OK ==27727== Conditional jump or move depends on uninitialised value(s)
+==27727==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27727==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27727==    by 0x10CF96: main (tests/d_test.cpp:40)
+==27727==  Uninitialised value was created by a stack allocation
+==27727==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27727== 
+[32m15.OK ==27728== Conditional jump or move depends on uninitialised value(s)
+==27728==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27728==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27728==    by 0x10CFBE: main (tests/d_test.cpp:41)
+==27728==  Uninitialised value was created by a stack allocation
+==27728==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27728== 
+[32m16.OK ==27729== Conditional jump or move depends on uninitialised value(s)
+==27729==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27729==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27729==    by 0x10CFE6: main (tests/d_test.cpp:42)
+==27729==  Uninitialised value was created by a stack allocation
+==27729==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27729== 
+[32m17.OK ==27730== Conditional jump or move depends on uninitialised value(s)
+==27730==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27730==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27730==    by 0x10D00E: main (tests/d_test.cpp:43)
+==27730==  Uninitialised value was created by a stack allocation
+==27730==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27730== 
+[32m18.OK ==27731== Conditional jump or move depends on uninitialised value(s)
+==27731==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27731==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27731==    by 0x10D036: main (tests/d_test.cpp:44)
+==27731==  Uninitialised value was created by a stack allocation
+==27731==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27731== 
+[32m19.OK ==27732== Conditional jump or move depends on uninitialised value(s)
+==27732==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27732==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27732==    by 0x10D05E: main (tests/d_test.cpp:45)
+==27732==  Uninitialised value was created by a stack allocation
+==27732==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27732== 
+[32m20.OK ==27736== Conditional jump or move depends on uninitialised value(s)
+==27736==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27736==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27736==    by 0x10D086: main (tests/d_test.cpp:46)
+==27736==  Uninitialised value was created by a stack allocation
+==27736==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27736== 
+[32m21.OK ==27737== Conditional jump or move depends on uninitialised value(s)
+==27737==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27737==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27737==    by 0x10D0AE: main (tests/d_test.cpp:47)
+==27737==  Uninitialised value was created by a stack allocation
+==27737==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27737== 
+[32m22.OK ==27738== Conditional jump or move depends on uninitialised value(s)
+==27738==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27738==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27738==    by 0x10D0D6: main (tests/d_test.cpp:48)
+==27738==  Uninitialised value was created by a stack allocation
+==27738==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27738== 
+[32m23.OK ==27739== Conditional jump or move depends on uninitialised value(s)
+==27739==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27739==    by 0x10DC77: void print<long>(char const*, long) (print.hpp:74)
+==27739==    by 0x10D103: main (tests/d_test.cpp:49)
+==27739==  Uninitialised value was created by a stack allocation
+==27739==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27739== 
+[32m24.OK ==27740== Conditional jump or move depends on uninitialised value(s)
+==27740==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27740==    by 0x10DC77: void print<long>(char const*, long) (print.hpp:74)
+==27740==    by 0x10D130: main (tests/d_test.cpp:50)
+==27740==  Uninitialised value was created by a stack allocation
+==27740==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27740== 
+[32m25.OK ==27741== Conditional jump or move depends on uninitialised value(s)
+==27741==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27741==    by 0x10E264: void print<unsigned int>(char const*, unsigned int) (print.hpp:74)
+==27741==    by 0x10D158: main (tests/d_test.cpp:51)
+==27741==  Uninitialised value was created by a stack allocation
+==27741==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27741== 
+[32m26.OK ==27742== Conditional jump or move depends on uninitialised value(s)
+==27742==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27742==    by 0x10E857: void print<unsigned long>(char const*, unsigned long) (print.hpp:74)
+==27742==    by 0x10D182: main (tests/d_test.cpp:52)
+==27742==  Uninitialised value was created by a stack allocation
+==27742==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27742== 
+[32m27.OK ==27743== Conditional jump or move depends on uninitialised value(s)
+==27743==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27743==    by 0x10EE47: void print<long long>(char const*, long long) (print.hpp:74)
+==27743==    by 0x10D1AF: main (tests/d_test.cpp:53)
+==27743==  Uninitialised value was created by a stack allocation
+==27743==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27743== 
+[32m28.OK ==27744== Conditional jump or move depends on uninitialised value(s)
+==27744==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27744==    by 0x10F485: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:74)
+==27744==    by 0x10D208: main (tests/d_test.cpp:54)
+==27744==  Uninitialised value was created by a stack allocation
+==27744==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/d_test)
+==27744== 
+[32m29.OK [0m
+[93mcategory: i[0m
+==27756== Conditional jump or move depends on uninitialised value(s)
+==27756==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27756==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27756==    by 0x10CD66: main (tests/i_test.cpp:26)
+==27756==  Uninitialised value was created by a stack allocation
+==27756==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27756== 
+[32m1.OK ==27757== Conditional jump or move depends on uninitialised value(s)
+==27757==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27757==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27757==    by 0x10CD8E: main (tests/i_test.cpp:27)
+==27757==  Uninitialised value was created by a stack allocation
+==27757==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27757== 
+[32m2.OK ==27758== Conditional jump or move depends on uninitialised value(s)
+==27758==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27758==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27758==    by 0x10CDB6: main (tests/i_test.cpp:28)
+==27758==  Uninitialised value was created by a stack allocation
+==27758==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27758== 
+[32m3.OK ==27759== Conditional jump or move depends on uninitialised value(s)
+==27759==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27759==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27759==    by 0x10CDDE: main (tests/i_test.cpp:29)
+==27759==  Uninitialised value was created by a stack allocation
+==27759==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27759== 
+[32m4.OK ==27760== Conditional jump or move depends on uninitialised value(s)
+==27760==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27760==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27760==    by 0x10CE06: main (tests/i_test.cpp:30)
+==27760==  Uninitialised value was created by a stack allocation
+==27760==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27760== 
+[32m5.OK ==27761== Conditional jump or move depends on uninitialised value(s)
+==27761==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27761==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27761==    by 0x10CE2E: main (tests/i_test.cpp:31)
+==27761==  Uninitialised value was created by a stack allocation
+==27761==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27761== 
+[32m6.OK ==27762== Conditional jump or move depends on uninitialised value(s)
+==27762==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27762==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27762==    by 0x10CE56: main (tests/i_test.cpp:32)
+==27762==  Uninitialised value was created by a stack allocation
+==27762==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27762== 
+[32m7.OK ==27763== Conditional jump or move depends on uninitialised value(s)
+==27763==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27763==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27763==    by 0x10CE7E: main (tests/i_test.cpp:33)
+==27763==  Uninitialised value was created by a stack allocation
+==27763==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27763== 
+[32m8.OK ==27764== Conditional jump or move depends on uninitialised value(s)
+==27764==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27764==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27764==    by 0x10CEA6: main (tests/i_test.cpp:34)
+==27764==  Uninitialised value was created by a stack allocation
+==27764==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27764== 
+[32m9.OK ==27765== Conditional jump or move depends on uninitialised value(s)
+==27765==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27765==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27765==    by 0x10CECE: main (tests/i_test.cpp:35)
+==27765==  Uninitialised value was created by a stack allocation
+==27765==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27765== 
+[32m10.OK ==27766== Conditional jump or move depends on uninitialised value(s)
+==27766==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27766==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27766==    by 0x10CEF6: main (tests/i_test.cpp:36)
+==27766==  Uninitialised value was created by a stack allocation
+==27766==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27766== 
+[32m11.OK ==27767== Conditional jump or move depends on uninitialised value(s)
+==27767==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27767==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27767==    by 0x10CF1E: main (tests/i_test.cpp:37)
+==27767==  Uninitialised value was created by a stack allocation
+==27767==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27767== 
+[32m12.OK ==27768== Conditional jump or move depends on uninitialised value(s)
+==27768==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27768==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27768==    by 0x10CF46: main (tests/i_test.cpp:38)
+==27768==  Uninitialised value was created by a stack allocation
+==27768==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27768== 
+[32m13.OK ==27769== Conditional jump or move depends on uninitialised value(s)
+==27769==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27769==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27769==    by 0x10CF6E: main (tests/i_test.cpp:39)
+==27769==  Uninitialised value was created by a stack allocation
+==27769==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27769== 
+[32m14.OK ==27770== Conditional jump or move depends on uninitialised value(s)
+==27770==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27770==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27770==    by 0x10CF96: main (tests/i_test.cpp:40)
+==27770==  Uninitialised value was created by a stack allocation
+==27770==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27770== 
+[32m15.OK ==27771== Conditional jump or move depends on uninitialised value(s)
+==27771==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27771==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27771==    by 0x10CFBE: main (tests/i_test.cpp:41)
+==27771==  Uninitialised value was created by a stack allocation
+==27771==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27771== 
+[32m16.OK ==27772== Conditional jump or move depends on uninitialised value(s)
+==27772==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27772==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27772==    by 0x10CFE6: main (tests/i_test.cpp:42)
+==27772==  Uninitialised value was created by a stack allocation
+==27772==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27772== 
+[32m17.OK ==27773== Conditional jump or move depends on uninitialised value(s)
+==27773==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27773==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27773==    by 0x10D00E: main (tests/i_test.cpp:43)
+==27773==  Uninitialised value was created by a stack allocation
+==27773==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27773== 
+[32m18.OK ==27774== Conditional jump or move depends on uninitialised value(s)
+==27774==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27774==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27774==    by 0x10D036: main (tests/i_test.cpp:44)
+==27774==  Uninitialised value was created by a stack allocation
+==27774==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27774== 
+[32m19.OK ==27775== Conditional jump or move depends on uninitialised value(s)
+==27775==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27775==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27775==    by 0x10D05E: main (tests/i_test.cpp:45)
+==27775==  Uninitialised value was created by a stack allocation
+==27775==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27775== 
+[32m20.OK ==27776== Conditional jump or move depends on uninitialised value(s)
+==27776==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27776==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27776==    by 0x10D086: main (tests/i_test.cpp:46)
+==27776==  Uninitialised value was created by a stack allocation
+==27776==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27776== 
+[32m21.OK ==27777== Conditional jump or move depends on uninitialised value(s)
+==27777==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27777==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27777==    by 0x10D0AE: main (tests/i_test.cpp:47)
+==27777==  Uninitialised value was created by a stack allocation
+==27777==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27777== 
+[32m22.OK ==27778== Conditional jump or move depends on uninitialised value(s)
+==27778==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27778==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27778==    by 0x10D0D6: main (tests/i_test.cpp:48)
+==27778==  Uninitialised value was created by a stack allocation
+==27778==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27778== 
+[32m23.OK ==27779== Conditional jump or move depends on uninitialised value(s)
+==27779==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27779==    by 0x10DC77: void print<long>(char const*, long) (print.hpp:74)
+==27779==    by 0x10D103: main (tests/i_test.cpp:49)
+==27779==  Uninitialised value was created by a stack allocation
+==27779==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27779== 
+[32m24.OK ==27780== Conditional jump or move depends on uninitialised value(s)
+==27780==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27780==    by 0x10DC77: void print<long>(char const*, long) (print.hpp:74)
+==27780==    by 0x10D130: main (tests/i_test.cpp:50)
+==27780==  Uninitialised value was created by a stack allocation
+==27780==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27780== 
+[32m25.OK ==27781== Conditional jump or move depends on uninitialised value(s)
+==27781==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27781==    by 0x10E264: void print<unsigned int>(char const*, unsigned int) (print.hpp:74)
+==27781==    by 0x10D158: main (tests/i_test.cpp:51)
+==27781==  Uninitialised value was created by a stack allocation
+==27781==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27781== 
+[32m26.OK ==27782== Conditional jump or move depends on uninitialised value(s)
+==27782==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27782==    by 0x10E857: void print<unsigned long>(char const*, unsigned long) (print.hpp:74)
+==27782==    by 0x10D182: main (tests/i_test.cpp:52)
+==27782==  Uninitialised value was created by a stack allocation
+==27782==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27782== 
+[32m27.OK ==27783== Conditional jump or move depends on uninitialised value(s)
+==27783==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27783==    by 0x10EE47: void print<long long>(char const*, long long) (print.hpp:74)
+==27783==    by 0x10D1AF: main (tests/i_test.cpp:53)
+==27783==  Uninitialised value was created by a stack allocation
+==27783==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27783== 
+[32m28.OK ==27784== Conditional jump or move depends on uninitialised value(s)
+==27784==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27784==    by 0x10F485: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:74)
+==27784==    by 0x10D208: main (tests/i_test.cpp:54)
+==27784==  Uninitialised value was created by a stack allocation
+==27784==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/i_test)
+==27784== 
+[32m29.OK [0m
+[93mcategory: u[0m
+==27793== Conditional jump or move depends on uninitialised value(s)
+==27793==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27793==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27793==    by 0x10CD66: main (tests/u_test.cpp:26)
+==27793==  Uninitialised value was created by a stack allocation
+==27793==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27793== 
+[32m1.OK ==27794== Conditional jump or move depends on uninitialised value(s)
+==27794==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27794==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27794==    by 0x10CD8E: main (tests/u_test.cpp:27)
+==27794==  Uninitialised value was created by a stack allocation
+==27794==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27794== 
+[32m2.OK ==27795== Conditional jump or move depends on uninitialised value(s)
+==27795==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27795==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27795==    by 0x10CDB6: main (tests/u_test.cpp:28)
+==27795==  Uninitialised value was created by a stack allocation
+==27795==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27795== 
+[32m3.OK ==27796== Conditional jump or move depends on uninitialised value(s)
+==27796==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27796==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27796==    by 0x10CDDE: main (tests/u_test.cpp:29)
+==27796==  Uninitialised value was created by a stack allocation
+==27796==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27796== 
+[32m4.OK ==27797== Conditional jump or move depends on uninitialised value(s)
+==27797==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27797==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27797==    by 0x10CE06: main (tests/u_test.cpp:30)
+==27797==  Uninitialised value was created by a stack allocation
+==27797==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27797== 
+[32m5.OK ==27798== Conditional jump or move depends on uninitialised value(s)
+==27798==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27798==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27798==    by 0x10CE2E: main (tests/u_test.cpp:31)
+==27798==  Uninitialised value was created by a stack allocation
+==27798==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27798== 
+[32m6.OK ==27799== Conditional jump or move depends on uninitialised value(s)
+==27799==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27799==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27799==    by 0x10CE56: main (tests/u_test.cpp:32)
+==27799==  Uninitialised value was created by a stack allocation
+==27799==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27799== 
+[32m7.OK ==27800== Conditional jump or move depends on uninitialised value(s)
+==27800==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27800==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27800==    by 0x10CE7E: main (tests/u_test.cpp:33)
+==27800==  Uninitialised value was created by a stack allocation
+==27800==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27800== 
+[32m8.OK ==27801== Conditional jump or move depends on uninitialised value(s)
+==27801==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27801==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27801==    by 0x10CEA6: main (tests/u_test.cpp:34)
+==27801==  Uninitialised value was created by a stack allocation
+==27801==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27801== 
+[32m9.OK ==27802== Conditional jump or move depends on uninitialised value(s)
+==27802==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27802==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27802==    by 0x10CECE: main (tests/u_test.cpp:35)
+==27802==  Uninitialised value was created by a stack allocation
+==27802==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27802== 
+[32m10.OK ==27803== Conditional jump or move depends on uninitialised value(s)
+==27803==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27803==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27803==    by 0x10CEF6: main (tests/u_test.cpp:36)
+==27803==  Uninitialised value was created by a stack allocation
+==27803==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27803== 
+[32m11.OK ==27804== Conditional jump or move depends on uninitialised value(s)
+==27804==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27804==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27804==    by 0x10CF1E: main (tests/u_test.cpp:37)
+==27804==  Uninitialised value was created by a stack allocation
+==27804==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27804== 
+[32m12.OK ==27805== Conditional jump or move depends on uninitialised value(s)
+==27805==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27805==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27805==    by 0x10CF46: main (tests/u_test.cpp:38)
+==27805==  Uninitialised value was created by a stack allocation
+==27805==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27805== 
+[32m13.OK ==27806== Conditional jump or move depends on uninitialised value(s)
+==27806==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27806==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27806==    by 0x10CF6E: main (tests/u_test.cpp:39)
+==27806==  Uninitialised value was created by a stack allocation
+==27806==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27806== 
+[32m14.OK ==27810== Conditional jump or move depends on uninitialised value(s)
+==27810==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27810==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27810==    by 0x10CF96: main (tests/u_test.cpp:40)
+==27810==  Uninitialised value was created by a stack allocation
+==27810==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27810== 
+[32m15.OK ==27811== Conditional jump or move depends on uninitialised value(s)
+==27811==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27811==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27811==    by 0x10CFBE: main (tests/u_test.cpp:41)
+==27811==  Uninitialised value was created by a stack allocation
+==27811==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27811== 
+[32m16.OK ==27812== Conditional jump or move depends on uninitialised value(s)
+==27812==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27812==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27812==    by 0x10CFE6: main (tests/u_test.cpp:42)
+==27812==  Uninitialised value was created by a stack allocation
+==27812==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27812== 
+[32m17.OK ==27813== Conditional jump or move depends on uninitialised value(s)
+==27813==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27813==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27813==    by 0x10D00E: main (tests/u_test.cpp:43)
+==27813==  Uninitialised value was created by a stack allocation
+==27813==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27813== 
+[32m18.OK ==27814== Conditional jump or move depends on uninitialised value(s)
+==27814==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27814==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27814==    by 0x10D036: main (tests/u_test.cpp:44)
+==27814==  Uninitialised value was created by a stack allocation
+==27814==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27814== 
+[32m19.OK ==27815== Conditional jump or move depends on uninitialised value(s)
+==27815==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27815==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27815==    by 0x10D05E: main (tests/u_test.cpp:45)
+==27815==  Uninitialised value was created by a stack allocation
+==27815==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27815== 
+[32m20.OK ==27816== Conditional jump or move depends on uninitialised value(s)
+==27816==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27816==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27816==    by 0x10D086: main (tests/u_test.cpp:46)
+==27816==  Uninitialised value was created by a stack allocation
+==27816==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27816== 
+[32m21.OK ==27817== Conditional jump or move depends on uninitialised value(s)
+==27817==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27817==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27817==    by 0x10D0AE: main (tests/u_test.cpp:47)
+==27817==  Uninitialised value was created by a stack allocation
+==27817==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27817== 
+[32m22.OK ==27818== Conditional jump or move depends on uninitialised value(s)
+==27818==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27818==    by 0x10D684: void print<int>(char const*, int) (print.hpp:74)
+==27818==    by 0x10D0D6: main (tests/u_test.cpp:48)
+==27818==  Uninitialised value was created by a stack allocation
+==27818==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27818== 
+[32m23.OK ==27819== Conditional jump or move depends on uninitialised value(s)
+==27819==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27819==    by 0x10DC77: void print<long>(char const*, long) (print.hpp:74)
+==27819==    by 0x10D103: main (tests/u_test.cpp:49)
+==27819==  Uninitialised value was created by a stack allocation
+==27819==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27819== 
+[32m24.OK ==27820== Conditional jump or move depends on uninitialised value(s)
+==27820==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27820==    by 0x10DC77: void print<long>(char const*, long) (print.hpp:74)
+==27820==    by 0x10D130: main (tests/u_test.cpp:50)
+==27820==  Uninitialised value was created by a stack allocation
+==27820==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27820== 
+[32m25.OK ==27821== Conditional jump or move depends on uninitialised value(s)
+==27821==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27821==    by 0x10E264: void print<unsigned int>(char const*, unsigned int) (print.hpp:74)
+==27821==    by 0x10D158: main (tests/u_test.cpp:51)
+==27821==  Uninitialised value was created by a stack allocation
+==27821==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27821== 
+[32m26.OK ==27822== Conditional jump or move depends on uninitialised value(s)
+==27822==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27822==    by 0x10E857: void print<unsigned long>(char const*, unsigned long) (print.hpp:74)
+==27822==    by 0x10D182: main (tests/u_test.cpp:52)
+==27822==  Uninitialised value was created by a stack allocation
+==27822==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27822== 
+[32m27.OK ==27823== Conditional jump or move depends on uninitialised value(s)
+==27823==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27823==    by 0x10EE47: void print<long long>(char const*, long long) (print.hpp:74)
+==27823==    by 0x10D1AF: main (tests/u_test.cpp:53)
+==27823==  Uninitialised value was created by a stack allocation
+==27823==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27823== 
+[32m28.OK ==27824== Conditional jump or move depends on uninitialised value(s)
+==27824==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27824==    by 0x10F485: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:74)
+==27824==    by 0x10D208: main (tests/u_test.cpp:54)
+==27824==  Uninitialised value was created by a stack allocation
+==27824==    at 0x10F82C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/u_test)
+==27824== 
+[32m29.OK [0m
+[93mcategory: x[0m
+==27833== Conditional jump or move depends on uninitialised value(s)
+==27833==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27833==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27833==    by 0x10CD66: main (tests/x_test.cpp:26)
+==27833==  Uninitialised value was created by a stack allocation
+==27833==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27833== 
+[32m1.OK ==27834== Conditional jump or move depends on uninitialised value(s)
+==27834==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27834==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27834==    by 0x10CD8E: main (tests/x_test.cpp:27)
+==27834==  Uninitialised value was created by a stack allocation
+==27834==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27834== 
+[32m2.OK ==27835== Conditional jump or move depends on uninitialised value(s)
+==27835==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27835==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27835==    by 0x10CDB6: main (tests/x_test.cpp:28)
+==27835==  Uninitialised value was created by a stack allocation
+==27835==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27835== 
+[32m3.OK ==27836== Conditional jump or move depends on uninitialised value(s)
+==27836==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27836==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27836==    by 0x10CDDE: main (tests/x_test.cpp:29)
+==27836==  Uninitialised value was created by a stack allocation
+==27836==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27836== 
+[32m4.OK ==27837== Conditional jump or move depends on uninitialised value(s)
+==27837==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27837==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27837==    by 0x10CE06: main (tests/x_test.cpp:30)
+==27837==  Uninitialised value was created by a stack allocation
+==27837==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27837== 
+[32m5.OK ==27838== Conditional jump or move depends on uninitialised value(s)
+==27838==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27838==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27838==    by 0x10CE2E: main (tests/x_test.cpp:31)
+==27838==  Uninitialised value was created by a stack allocation
+==27838==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27838== 
+[32m6.OK ==27839== Conditional jump or move depends on uninitialised value(s)
+==27839==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27839==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27839==    by 0x10CE56: main (tests/x_test.cpp:32)
+==27839==  Uninitialised value was created by a stack allocation
+==27839==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27839== 
+[32m7.OK ==27840== Conditional jump or move depends on uninitialised value(s)
+==27840==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27840==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27840==    by 0x10CE7E: main (tests/x_test.cpp:33)
+==27840==  Uninitialised value was created by a stack allocation
+==27840==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27840== 
+[32m8.OK ==27841== Conditional jump or move depends on uninitialised value(s)
+==27841==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27841==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27841==    by 0x10CEA6: main (tests/x_test.cpp:34)
+==27841==  Uninitialised value was created by a stack allocation
+==27841==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27841== 
+[32m9.OK ==27842== Conditional jump or move depends on uninitialised value(s)
+==27842==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27842==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27842==    by 0x10CECE: main (tests/x_test.cpp:35)
+==27842==  Uninitialised value was created by a stack allocation
+==27842==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27842== 
+[32m10.OK ==27843== Conditional jump or move depends on uninitialised value(s)
+==27843==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27843==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27843==    by 0x10CEF6: main (tests/x_test.cpp:36)
+==27843==  Uninitialised value was created by a stack allocation
+==27843==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27843== 
+[32m11.OK ==27844== Conditional jump or move depends on uninitialised value(s)
+==27844==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27844==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27844==    by 0x10CF1E: main (tests/x_test.cpp:37)
+==27844==  Uninitialised value was created by a stack allocation
+==27844==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27844== 
+[32m12.OK ==27845== Conditional jump or move depends on uninitialised value(s)
+==27845==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27845==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27845==    by 0x10CF46: main (tests/x_test.cpp:38)
+==27845==  Uninitialised value was created by a stack allocation
+==27845==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27845== 
+[32m13.OK ==27846== Conditional jump or move depends on uninitialised value(s)
+==27846==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27846==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27846==    by 0x10CF6E: main (tests/x_test.cpp:39)
+==27846==  Uninitialised value was created by a stack allocation
+==27846==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27846== 
+[32m14.OK ==27847== Conditional jump or move depends on uninitialised value(s)
+==27847==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27847==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27847==    by 0x10CF96: main (tests/x_test.cpp:40)
+==27847==  Uninitialised value was created by a stack allocation
+==27847==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27847== 
+[32m15.OK ==27848== Conditional jump or move depends on uninitialised value(s)
+==27848==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27848==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27848==    by 0x10CFBE: main (tests/x_test.cpp:41)
+==27848==  Uninitialised value was created by a stack allocation
+==27848==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27848== 
+[32m16.OK ==27850== Conditional jump or move depends on uninitialised value(s)
+==27850==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27850==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27850==    by 0x10CFE6: main (tests/x_test.cpp:42)
+==27850==  Uninitialised value was created by a stack allocation
+==27850==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27850== 
+[32m17.OK ==27851== Conditional jump or move depends on uninitialised value(s)
+==27851==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27851==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27851==    by 0x10D00E: main (tests/x_test.cpp:43)
+==27851==  Uninitialised value was created by a stack allocation
+==27851==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27851== 
+[32m18.OK ==27852== Conditional jump or move depends on uninitialised value(s)
+==27852==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27852==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27852==    by 0x10D036: main (tests/x_test.cpp:44)
+==27852==  Uninitialised value was created by a stack allocation
+==27852==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27852== 
+[32m19.OK ==27853== Conditional jump or move depends on uninitialised value(s)
+==27853==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27853==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27853==    by 0x10D05E: main (tests/x_test.cpp:45)
+==27853==  Uninitialised value was created by a stack allocation
+==27853==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27853== 
+[32m20.OK ==27854== Conditional jump or move depends on uninitialised value(s)
+==27854==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27854==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27854==    by 0x10D086: main (tests/x_test.cpp:46)
+==27854==  Uninitialised value was created by a stack allocation
+==27854==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27854== 
+[32m21.OK ==27855== Conditional jump or move depends on uninitialised value(s)
+==27855==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27855==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27855==    by 0x10D0AE: main (tests/x_test.cpp:47)
+==27855==  Uninitialised value was created by a stack allocation
+==27855==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27855== 
+[32m22.OK ==27856== Conditional jump or move depends on uninitialised value(s)
+==27856==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27856==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27856==    by 0x10D0D6: main (tests/x_test.cpp:48)
+==27856==  Uninitialised value was created by a stack allocation
+==27856==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27856== 
+[32m23.OK ==27857== Conditional jump or move depends on uninitialised value(s)
+==27857==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27857==    by 0x10DCC7: void print<long>(char const*, long) (print.hpp:74)
+==27857==    by 0x10D103: main (tests/x_test.cpp:49)
+==27857==  Uninitialised value was created by a stack allocation
+==27857==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27857== 
+[32m24.OK ==27858== Conditional jump or move depends on uninitialised value(s)
+==27858==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27858==    by 0x10DCC7: void print<long>(char const*, long) (print.hpp:74)
+==27858==    by 0x10D130: main (tests/x_test.cpp:50)
+==27858==  Uninitialised value was created by a stack allocation
+==27858==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27858== 
+[32m25.OK ==27859== Conditional jump or move depends on uninitialised value(s)
+==27859==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27859==    by 0x10E2B4: void print<unsigned int>(char const*, unsigned int) (print.hpp:74)
+==27859==    by 0x10D158: main (tests/x_test.cpp:51)
+==27859==  Uninitialised value was created by a stack allocation
+==27859==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27859== 
+[32m26.OK ==27860== Conditional jump or move depends on uninitialised value(s)
+==27860==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27860==    by 0x10E8A7: void print<unsigned long>(char const*, unsigned long) (print.hpp:74)
+==27860==    by 0x10D182: main (tests/x_test.cpp:52)
+==27860==  Uninitialised value was created by a stack allocation
+==27860==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27860== 
+[32m27.OK ==27861== Conditional jump or move depends on uninitialised value(s)
+==27861==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27861==    by 0x10EE97: void print<long long>(char const*, long long) (print.hpp:74)
+==27861==    by 0x10D1AF: main (tests/x_test.cpp:53)
+==27861==  Uninitialised value was created by a stack allocation
+==27861==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27861== 
+[32m28.OK ==27862== Conditional jump or move depends on uninitialised value(s)
+==27862==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27862==    by 0x10F4D5: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:74)
+==27862==    by 0x10D208: main (tests/x_test.cpp:54)
+==27862==  Uninitialised value was created by a stack allocation
+==27862==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27862== 
+[32m29.OK ==27863== Conditional jump or move depends on uninitialised value(s)
+==27863==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27863==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27863==    by 0x10D230: main (tests/x_test.cpp:55)
+==27863==  Uninitialised value was created by a stack allocation
+==27863==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27863== 
+[32m30.OK ==27864== Conditional jump or move depends on uninitialised value(s)
+==27864==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27864==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27864==    by 0x10D258: main (tests/x_test.cpp:56)
+==27864==  Uninitialised value was created by a stack allocation
+==27864==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/x_test)
+==27864== 
+[32m31.OK [0m
+[93mcategory: X[0m
+==27898== Conditional jump or move depends on uninitialised value(s)
+==27898==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27898==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27898==    by 0x10CD66: main (tests/upperx_test.cpp:26)
+==27898==  Uninitialised value was created by a stack allocation
+==27898==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27898== 
+[32m1.OK ==27899== Conditional jump or move depends on uninitialised value(s)
+==27899==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27899==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27899==    by 0x10CD8E: main (tests/upperx_test.cpp:27)
+==27899==  Uninitialised value was created by a stack allocation
+==27899==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27899== 
+[32m2.OK ==27900== Conditional jump or move depends on uninitialised value(s)
+==27900==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27900==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27900==    by 0x10CDB6: main (tests/upperx_test.cpp:28)
+==27900==  Uninitialised value was created by a stack allocation
+==27900==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27900== 
+[32m3.OK ==27901== Conditional jump or move depends on uninitialised value(s)
+==27901==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27901==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27901==    by 0x10CDDE: main (tests/upperx_test.cpp:29)
+==27901==  Uninitialised value was created by a stack allocation
+==27901==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27901== 
+[32m4.OK ==27902== Conditional jump or move depends on uninitialised value(s)
+==27902==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27902==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27902==    by 0x10CE06: main (tests/upperx_test.cpp:30)
+==27902==  Uninitialised value was created by a stack allocation
+==27902==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27902== 
+[32m5.OK ==27903== Conditional jump or move depends on uninitialised value(s)
+==27903==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27903==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27903==    by 0x10CE2E: main (tests/upperx_test.cpp:31)
+==27903==  Uninitialised value was created by a stack allocation
+==27903==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27903== 
+[32m6.OK ==27904== Conditional jump or move depends on uninitialised value(s)
+==27904==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27904==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27904==    by 0x10CE56: main (tests/upperx_test.cpp:32)
+==27904==  Uninitialised value was created by a stack allocation
+==27904==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27904== 
+[32m7.OK ==27905== Conditional jump or move depends on uninitialised value(s)
+==27905==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27905==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27905==    by 0x10CE7E: main (tests/upperx_test.cpp:33)
+==27905==  Uninitialised value was created by a stack allocation
+==27905==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27905== 
+[32m8.OK ==27906== Conditional jump or move depends on uninitialised value(s)
+==27906==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27906==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27906==    by 0x10CEA6: main (tests/upperx_test.cpp:34)
+==27906==  Uninitialised value was created by a stack allocation
+==27906==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27906== 
+[32m9.OK ==27907== Conditional jump or move depends on uninitialised value(s)
+==27907==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27907==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27907==    by 0x10CECE: main (tests/upperx_test.cpp:35)
+==27907==  Uninitialised value was created by a stack allocation
+==27907==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27907== 
+[32m10.OK ==27908== Conditional jump or move depends on uninitialised value(s)
+==27908==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27908==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27908==    by 0x10CEF6: main (tests/upperx_test.cpp:36)
+==27908==  Uninitialised value was created by a stack allocation
+==27908==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27908== 
+[32m11.OK ==27909== Conditional jump or move depends on uninitialised value(s)
+==27909==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27909==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27909==    by 0x10CF1E: main (tests/upperx_test.cpp:37)
+==27909==  Uninitialised value was created by a stack allocation
+==27909==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27909== 
+[32m12.OK ==27910== Conditional jump or move depends on uninitialised value(s)
+==27910==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27910==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27910==    by 0x10CF46: main (tests/upperx_test.cpp:38)
+==27910==  Uninitialised value was created by a stack allocation
+==27910==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27910== 
+[32m13.OK ==27911== Conditional jump or move depends on uninitialised value(s)
+==27911==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27911==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27911==    by 0x10CF6E: main (tests/upperx_test.cpp:39)
+==27911==  Uninitialised value was created by a stack allocation
+==27911==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27911== 
+[32m14.OK ==27912== Conditional jump or move depends on uninitialised value(s)
+==27912==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27912==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27912==    by 0x10CF96: main (tests/upperx_test.cpp:40)
+==27912==  Uninitialised value was created by a stack allocation
+==27912==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27912== 
+[32m15.OK ==27913== Conditional jump or move depends on uninitialised value(s)
+==27913==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27913==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27913==    by 0x10CFBE: main (tests/upperx_test.cpp:41)
+==27913==  Uninitialised value was created by a stack allocation
+==27913==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27913== 
+[32m16.OK ==27914== Conditional jump or move depends on uninitialised value(s)
+==27914==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27914==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27914==    by 0x10CFE6: main (tests/upperx_test.cpp:42)
+==27914==  Uninitialised value was created by a stack allocation
+==27914==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27914== 
+[32m17.OK ==27915== Conditional jump or move depends on uninitialised value(s)
+==27915==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27915==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27915==    by 0x10D00E: main (tests/upperx_test.cpp:43)
+==27915==  Uninitialised value was created by a stack allocation
+==27915==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27915== 
+[32m18.OK ==27916== Conditional jump or move depends on uninitialised value(s)
+==27916==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27916==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27916==    by 0x10D036: main (tests/upperx_test.cpp:44)
+==27916==  Uninitialised value was created by a stack allocation
+==27916==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27916== 
+[32m19.OK ==27917== Conditional jump or move depends on uninitialised value(s)
+==27917==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27917==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27917==    by 0x10D05E: main (tests/upperx_test.cpp:45)
+==27917==  Uninitialised value was created by a stack allocation
+==27917==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27917== 
+[32m20.OK ==27918== Conditional jump or move depends on uninitialised value(s)
+==27918==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27918==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27918==    by 0x10D086: main (tests/upperx_test.cpp:46)
+==27918==  Uninitialised value was created by a stack allocation
+==27918==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27918== 
+[32m21.OK ==27919== Conditional jump or move depends on uninitialised value(s)
+==27919==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27919==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27919==    by 0x10D0AE: main (tests/upperx_test.cpp:47)
+==27919==  Uninitialised value was created by a stack allocation
+==27919==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27919== 
+[32m22.OK ==27920== Conditional jump or move depends on uninitialised value(s)
+==27920==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27920==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27920==    by 0x10D0D6: main (tests/upperx_test.cpp:48)
+==27920==  Uninitialised value was created by a stack allocation
+==27920==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27920== 
+[32m23.OK ==27921== Conditional jump or move depends on uninitialised value(s)
+==27921==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27921==    by 0x10DCC7: void print<long>(char const*, long) (print.hpp:74)
+==27921==    by 0x10D103: main (tests/upperx_test.cpp:49)
+==27921==  Uninitialised value was created by a stack allocation
+==27921==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27921== 
+[32m24.OK ==27922== Conditional jump or move depends on uninitialised value(s)
+==27922==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27922==    by 0x10DCC7: void print<long>(char const*, long) (print.hpp:74)
+==27922==    by 0x10D130: main (tests/upperx_test.cpp:50)
+==27922==  Uninitialised value was created by a stack allocation
+==27922==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27922== 
+[32m25.OK ==27923== Conditional jump or move depends on uninitialised value(s)
+==27923==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27923==    by 0x10E2B4: void print<unsigned int>(char const*, unsigned int) (print.hpp:74)
+==27923==    by 0x10D158: main (tests/upperx_test.cpp:51)
+==27923==  Uninitialised value was created by a stack allocation
+==27923==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27923== 
+[32m26.OK ==27924== Conditional jump or move depends on uninitialised value(s)
+==27924==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27924==    by 0x10E8A7: void print<unsigned long>(char const*, unsigned long) (print.hpp:74)
+==27924==    by 0x10D182: main (tests/upperx_test.cpp:52)
+==27924==  Uninitialised value was created by a stack allocation
+==27924==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27924== 
+[32m27.OK ==27925== Conditional jump or move depends on uninitialised value(s)
+==27925==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27925==    by 0x10EE97: void print<long long>(char const*, long long) (print.hpp:74)
+==27925==    by 0x10D1AF: main (tests/upperx_test.cpp:53)
+==27925==  Uninitialised value was created by a stack allocation
+==27925==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27925== 
+[32m28.OK ==27926== Conditional jump or move depends on uninitialised value(s)
+==27926==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27926==    by 0x10F4D5: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:74)
+==27926==    by 0x10D208: main (tests/upperx_test.cpp:54)
+==27926==  Uninitialised value was created by a stack allocation
+==27926==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27926== 
+[32m29.OK ==27927== Conditional jump or move depends on uninitialised value(s)
+==27927==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27927==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27927==    by 0x10D230: main (tests/upperx_test.cpp:55)
+==27927==  Uninitialised value was created by a stack allocation
+==27927==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27927== 
+[32m30.OK ==27928== Conditional jump or move depends on uninitialised value(s)
+==27928==    at 0x10A8D7: check(bool) (utils/check.cpp:7)
+==27928==    by 0x10D6D4: void print<int>(char const*, int) (print.hpp:74)
+==27928==    by 0x10D258: main (tests/upperx_test.cpp:56)
+==27928==  Uninitialised value was created by a stack allocation
+==27928==    at 0x10F87C: ft_printf_buffer (in /home/gabriel/francinette/temp/printf/printfTester/upperx_test)
+==27928== 
+[32m31.OK [0m
+[93mcategory: %[0m
+[31m1.KO [31m2.KO [31m3.KO [31m4.KO [31m5.KO [31m6.KO [31m7.KO [0m
+[93mcategory: mix[0m
+[31m1.KO [0m
+
+⠋ Processing output⠙ Processing outputErrors found:
+For /home/gabriel/francinette/tests/printf/printfTester/tests/p_test.cpp:
+33:     TEST(9, print(" %p %p ", 0, 0));
+
+For /home/gabriel/francinette/tests/printf/printfTester/tests/percent_test.cpp:
+25:     TEST(1, print(" %% "));
+26:     TEST(2, print(" %%%% "));
+27:     TEST(3, print(" %% %% %% "));
+28:     TEST(4, print(" %%  %%  %% "));
+29:     TEST(5, print(" %%   %%   %% "));
+30:     TEST(6, print("%%"));
+31:     TEST(7, print("%% %%"));
+
+For /home/gabriel/francinette/tests/printf/printfTester/tests/mix_test.cpp:
+25:     TEST(1, print("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0
+,0 ,0, 42, 0));
+
+
+⠋ Compiling tests: fsoares (my own tests)⠙ Compiling tests: fsoares (my own tests)⠹ Compiling tests: fsoares (my own tests)⠸ Compiling tests: fsoares (my own tests)⠼ Compiling tests: fsoares (my own tests)⠴ Compiling tests: fsoares (my own tests)⠦ Compiling tests: fsoares (my own tests)⠧ Compiling tests: fsoares (my own tests)⠇ Compiling tests: fsoares (my own tests)⠏ Compiling tests: fsoares (my own tests)⠋ Compiling tests: fsoares (my own tests)⠙ Compiling tests: fsoares (my own tests)⠹ Compiling tests: fsoares (my own tests)⠸ Compiling tests: fsoares (my own tests)⠼ Compiling tests: fsoares (my own tests)ℹ Running tests: fsoares (my own tests)
+AddressSanitizer: CHECK failed: asan_posix.cpp:125 "((tsd_key_inited)) != (0)" (0x0, 0x0) (tid=28034)
+    <empty stack>
+
+Want some more thorough tests? run 'francinette --strict'.
+
+Summary: no bonus
+
+Norminette Errors: src/ft_printf_format.c, src/ft_printf.c, src/ft_printf_ptr.c, src/ft_printf.h, src/ft_printf_hex.c, src/ft_printf_str.c
+
+Failed tests: printfTester
+

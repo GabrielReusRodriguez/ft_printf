@@ -1,0 +1,3 @@
+d Gregorio ReusSIZE: 39
+ i : 0
+ i : 24
