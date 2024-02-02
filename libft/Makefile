@@ -6,15 +6,17 @@
 #    By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/04 01:34:53 by greus-ro          #+#    #+#              #
-#    Updated: 2024/01/14 22:14:43 by greus-ro         ###   ########.fr        #
+#    Updated: 2024/02/02 13:12:50 by greus-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
-BONUS_NAME=libft_bonus.a
 CFLAGS=-Wall -Wextra -Werror -MMD -MP
-BIN_DIR=.
-SRC_DIR=.
+
+BIN_DIR = ./bin
+SRC_DIR = ./src
+INC_DIR = ../inc
+EXPORT_DIR = ../bin
 
 LIBFT_SRC_FILES=	ft_atoi.c			\
 					ft_bzero.c			\
@@ -69,39 +71,44 @@ BONUS_SRC_FILES=	ft_lstadd_front_bonus.c	\
 					ft_lstsize_bonus.c		
 
 
-BONUS_OBJ_FILES=$(BONUS_SRC_FILES:.c=.o)
-BONUS_DEP_FILES=$(BONUS_SRC_FILES:.c=.d)
+LIB_SRC   = $(addprefix ${SRC_DIR}, ${LIB_SRC_FILES})
+BONUS_SRC = $(addprefix ${SRC_DIR}, ${BONUS_SRC_FILES})
 
-LIBFT_OBJ_FILES=$(LIBFT_SRC_FILES:.c=.o)
-LIBFT_DEP_FILES=$(LIBFT_SRC_FILES:.c=.d)
+BONUS_OBJ_FILES=$(BONUS_SRC_FILES:%.c=${BIN_DIR}/%.o)
+BONUS_DEP_FILES=$(BONUS_SRC_FILES:%.c=${BIN_DIR}/%.d)
+
+LIBFT_OBJ_FILES=$(LIBFT_SRC_FILES:%.c=${BIN_DIR}/%.o)
+LIBFT_DEP_FILES=$(LIBFT_SRC_FILES:%.c=${BIN_DIR}/%.d)
 
 all:${NAME}
 	
-${NAME}: ${BIN_DIR} ${LIBFT_OBJ_FILES} Makefile
-	ar -rcs ${NAME} ${LIBFT_OBJ_FILES}
+${NAME}: ${BIN_DIR} ${LIBFT_OBJ_FILES} 
+	ar -rcsT ${BIN_DIR}/${NAME} ${LIBFT_OBJ_FILES}
+	@cp ${SRC_DIR}/libft.h ${INC_DIR}/
+	@cp ${BIN_DIR}/${NAME} ${EXPORT_DIR}/${NAME}
 
 ${BIN_DIR}:
 	mkdir -p ${BIN_DIR}
 	
-${BIN_DIR}/.o:.c
-	cc ${CFLAGS}  -c -o $@  $< 
-
+${BIN_DIR}/%.o:${SRC_DIR}/%.c Makefile
+	cc ${CFLAGS} -c -o $@  $< 
+	
 clean:
 	rm -f ${BIN_DIR}/*.o
-	rm -f ${BIN_DIR}/*.d
+	rm -f ${DEP_DIR}/*.d
 
 fclean: clean 
-	rm -f *.a
+	rm -f ./*.a
+	rm -f ${EXPORT_DIR}/${NAME}
 	
 re: fclean all
 
-bonus: ${BONUS_NAME}
-
-${BONUS_NAME}: ${BONUS_OBJ_FILES} ${LIBFT_OBJ_FILES} Makefile
-	ar -rcs ${BONUS_NAME} ${LIBFT_OBJ_FILES} ${BONUS_OBJ_FILES}
-	cp ${BONUS_NAME} ${NAME}
+bonus : ${BIN_DIR} ${BONUS_OBJ_FILES} ${LIBFT_OBJ_FILES}
+	ar -rcsT ${NAME} ${LIBFT_OBJ_FILES} ${BONUS_OBJ_FILES}
+	cp ${BIN_DIR}/${NAME} ${EXPORT_DIR}/${NAME}
+	touch bonus
 
 -include ${LIBFT_DEP_FILES} ${BONUS_DEP_FILES}
 
-.PHONY= all clean fclean re bonus 
+.PHONY= all clean fclean re
 

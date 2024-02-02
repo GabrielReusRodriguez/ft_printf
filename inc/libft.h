@@ -6,7 +6,7 @@
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 20:37:22 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/11 23:46:00 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/01/14 22:16:12 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,19 @@ int		ft_islower(int c);
 int		ft_isprint(int c);
 int		ft_isupper(int c);
 char	*ft_itoa(int n);
+char	*ft_utoa(unsigned int n);
 
 void	*ft_memcpy(void	*dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memset(void	*s, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+int		ft_iputchar_fd(char c, int fd);
+int		ft_iputstr_fd(char *s, int fd);
+int		ft_iputendl_fd(char *s, int fd);
+int		ft_iputnbr_fd(int n, int fd);
+int		ft_iputstr_fd(char *s, int fd);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
