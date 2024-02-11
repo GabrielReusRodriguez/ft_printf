@@ -6,7 +6,7 @@
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:53:29 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/02 14:31:48 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/02/02 17:24:04 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static t_format	*ft_new_format(void)
 {
 	t_format	*format;
 
-	format = malloc(sizeof(t_format));
+	format = (t_format *)malloc(sizeof(t_format));
 	if (format == NULL)
 		return (NULL);
 	format->b_hash = 0;
@@ -56,6 +56,7 @@ static void	ft_update_format(char c, t_format *format)
 		}
 		else
 		{
+			//format->n_width = format->n_width * 10 + ft_atoi(&c);
 			if (format->b_precision == 0)
 				format->n_width = format->n_width * 10 + ft_atoi(&c);
 			else

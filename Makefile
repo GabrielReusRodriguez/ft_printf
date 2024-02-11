@@ -5,7 +5,8 @@ CFLAGS=-Wall -Wextra -Werror -MMD -MP -g
 #CFLAGS= -g
 
 BIN_DIR=./bin
-SRC_DIR=./src
+#SRC_DIR=./src
+SRC_DIR=./bonus
 INC_DIR=./inc
 
 BONUS_SRC_DIR= ./bonus
@@ -32,7 +33,8 @@ ${LIBFT_LIB}:
 
 ${NAME}: ${LIBFT_LIB} ${OBJ_FILES} 
 	ar -rcsT ${NAME}  ${BIN_DIR}/libft.a  ${OBJ_FILES} 
-	cp ${SRC_DIR}/ft_printf.h ${INC_DIR}/
+#	cp ${SRC_DIR}/ft_printf_bonus.h ${INC_DIR}/ft_printf_bonus.h
+	cp ${SRC_DIR}/ft_printf.h ${INC_DIR}/ft_printf.h
 
 ${BIN_DIR}/%.o: ${SRC_DIR}/%.c Makefile
 	${CC} ${CFLAGS} -I ${INC_DIR} -o $@ -c $<
@@ -48,10 +50,11 @@ ${BIN_DIR}:
 #	cp ${BONUS_SRC_DIR}/ft_printf_bonus.h ${INC_DIR}/
 #	touch bonus
 
-bonus: ${LIBFT_LIB} ${BONUS_OBJ_FILES}
-	ar -rcsT ./libftprintf_bonus.a  ${BIN_DIR}/libft.a  ${BONUS_OBJ_FILES} 
-	cp ${BONUS_SRC_DIR}/ft_printf_bonus.h ${INC_DIR}/
-	touch bonus
+#bonus: ${LIBFT_LIB} ${BONUS_OBJ_FILES}
+#	ar -rcsT ./libftprintf_bonus.a  ${BIN_DIR}/libft.a  ${BONUS_OBJ_FILES} 
+#	cp ${BONUS_SRC_DIR}/ft_printf_bonus.h ${INC_DIR}/
+#	touch bonus
+bonus : all
 
 clean:
 	rm -f ${BIN_DIR}/*.o

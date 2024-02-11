@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:57 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/02 14:05:00 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/02/02 17:44:24 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,7 @@ t_format	*ft_load_format(const char *str);
 char		*ft_apply_sign_format(char *str, int positive, t_format *format);
 char		*ft_apply_hash_format(char *str, unsigned long n, t_format *format);
 char		*ft_apply_width(char *str, t_format *format);
+
+char		*ft_create_padding(size_t size, char chr_padding);
 
 #endif

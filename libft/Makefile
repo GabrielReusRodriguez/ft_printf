@@ -6,12 +6,12 @@
 #    By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/04 01:34:53 by greus-ro          #+#    #+#              #
-#    Updated: 2024/02/02 13:12:50 by greus-ro         ###   ########.fr        #
+#    Updated: 2024/02/02 17:15:03 by greus-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
-CFLAGS=-Wall -Wextra -Werror -MMD -MP
+CFLAGS=-Wall -Wextra -Werror -MMD -MP -g
 
 BIN_DIR = ./bin
 SRC_DIR = ./src
