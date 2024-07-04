@@ -3,112 +3,103 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+         #
+#    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/04 01:34:53 by greus-ro          #+#    #+#              #
-#    Updated: 2024/02/02 17:15:03 by greus-ro         ###   ########.fr        #
+#    Updated: 2024/07/05 01:11:40 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=libft.a
-CFLAGS=-Wall -Wextra -Werror -MMD -MP -g
+NAME	= libft.a
+CFLAGS	= -Wall -Wextra -Werror -MMD -MP 
 
-BIN_DIR = ./bin
+ifdef CSANITIZE
+	SANITIZE_FLAGS = -g -fsanitize=${CSANITIZE}
+endif
+
+DEPFLAGS = -MMD -MP 
+
+OBJ_DIR = ./obj
 SRC_DIR = ./src
-INC_DIR = ../inc
-EXPORT_DIR = ../bin
+INC_DIR = ./inc
 
-LIBFT_SRC_FILES=	ft_atoi.c			\
-					ft_bzero.c			\
-					ft_calloc.c			\
-					ft_iputchar_fd.c	\
-					ft_iputendl_fd.c	\
-					ft_iputnbr_fd.c		\
-					ft_iputstr_fd.c		\
-					ft_isalnum.c		\
-					ft_isalpha.c		\
-					ft_isascii.c		\
-					ft_isdigit.c		\
-					ft_islower.c		\
-					ft_isupper.c		\
-					ft_isprint.c		\
-					ft_itoa.c			\
-					ft_memchr.c			\
-					ft_memcmp.c			\
-					ft_memcpy.c			\
-					ft_memmove.c		\
-					ft_memset.c			\
-					ft_putchar_fd.c		\
-					ft_putendl_fd.c		\
-					ft_putnbr_fd.c		\
-					ft_putstr_fd.c		\
-					ft_split.c			\
-					ft_strchr.c			\
-					ft_strdup.c			\
-					ft_striteri.c		\
-					ft_strjoin.c		\
-					ft_strlcat.c		\
-					ft_strlcpy.c		\
-					ft_strlen.c			\
-					ft_strmapi.c		\
-					ft_strncmp.c		\
-					ft_strnstr.c		\
-					ft_strrchr.c		\
-					ft_strtrim.c		\
-					ft_substr.c			\
-					ft_tolower.c		\
-					ft_toupper.c		\
-					ft_utoa.c
+LIBFT_SRC_FILES=	ft_atoi			\
+					ft_bzero		\
+					ft_calloc		\
+					ft_iputchar_fd	\
+					ft_iputendl_fd	\
+					ft_iputnbr_fd	\
+					ft_iputstr_fd	\
+					ft_isalnum		\
+					ft_isalpha		\
+					ft_isascii		\
+					ft_isdigit		\
+					ft_islower		\
+					ft_isupper		\
+					ft_isprint		\
+					ft_itoa			\
+					ft_memchr		\
+					ft_memcmp		\
+					ft_memcpy		\
+					ft_memmove		\
+					ft_memset		\
+					ft_putchar_fd	\
+					ft_putendl_fd	\
+					ft_putnbr_fd	\
+					ft_putstr_fd	\
+					ft_split		\
+					ft_strchr		\
+					ft_strdup		\
+					ft_striteri		\
+					ft_strjoin		\
+					ft_strlcat		\
+					ft_strlcpy		\
+					ft_strlen		\
+					ft_strmapi		\
+					ft_strncmp		\
+					ft_strnstr		\
+					ft_strrchr		\
+					ft_strtrim		\
+					ft_substr		\
+					ft_tolower		\
+					ft_toupper		\
+					ft_utoa
 
-BONUS_SRC_FILES=	ft_lstadd_front_bonus.c	\
-					ft_lstadd_back_bonus.c	\
-					ft_lstclear_bonus.c		\
-					ft_lstdelone_bonus.c	\
-					ft_lstiter_bonus.c		\
-					ft_lstlast_bonus.c		\
-					ft_lstmap_bonus.c		\
-					ft_lstnew_bonus.c		\
-					ft_lstsize_bonus.c		
+BONUS_SRC_FILES=	ft_lstadd_front_bonus	\
+					ft_lstadd_back_bonus	\
+					ft_lstclear_bonus		\
+					ft_lstdelone_bonus		\
+					ft_lstiter_bonus		\
+					ft_lstlast_bonus		\
+					ft_lstmap_bonus			\
+					ft_lstnew_bonus			\
+					ft_lstsize_bonus		
 
 
-LIB_SRC   = $(addprefix ${SRC_DIR}, ${LIB_SRC_FILES})
-BONUS_SRC = $(addprefix ${SRC_DIR}, ${BONUS_SRC_FILES})
-
-BONUS_OBJ_FILES=$(BONUS_SRC_FILES:%.c=${BIN_DIR}/%.o)
-BONUS_DEP_FILES=$(BONUS_SRC_FILES:%.c=${BIN_DIR}/%.d)
-
-LIBFT_OBJ_FILES=$(LIBFT_SRC_FILES:%.c=${BIN_DIR}/%.o)
-LIBFT_DEP_FILES=$(LIBFT_SRC_FILES:%.c=${BIN_DIR}/%.d)
+SRC	= $(addprefix ${SRC_DIR}/, $(addsuffix .c, ${LIBFT_SRC_FILES} ${BONUS_SRC_FILES}))
+OBJ	= $(addprefix ${OBJ_DIR}/, $(addsuffix .o, ${LIBFT_SRC_FILES} ${BONUS_SRC_FILES}))
+DEP	= $(addprefix ${OBJ_DIR}/, $(addsuffix .d, ${LIBFT_SRC_FILES} ${BONUS_SRC_FILES}))
 
 all:${NAME}
 	
-${NAME}: ${BIN_DIR} ${LIBFT_OBJ_FILES} 
-	ar -rcsT ${BIN_DIR}/${NAME} ${LIBFT_OBJ_FILES}
-	@cp ${SRC_DIR}/libft.h ${INC_DIR}/
-	@cp ${BIN_DIR}/${NAME} ${EXPORT_DIR}/${NAME}
+${NAME}: ${OBJ} 
+	ar -csr ${NAME} ${OBJ}
+#	ar -crs ${NAME} ${OBJ}
 
-${BIN_DIR}:
-	mkdir -p ${BIN_DIR}
-	
-${BIN_DIR}/%.o:${SRC_DIR}/%.c Makefile
-	cc ${CFLAGS} -c -o $@  $< 
+${OBJ_DIR}/%.o:${SRC_DIR}/%.c Makefile
+	@mkdir -p ${OBJ_DIR}
+	cc ${CFLAGS}  ${DEPFLAGS} ${SANITIZE_FLAGS} -I ${INC_DIR} -c -o $@  $< 
 	
 clean:
-	rm -f ${BIN_DIR}/*.o
-	rm -f ${DEP_DIR}/*.d
+	rm -f ${OBJ_DIR}/*.o
+	rm -f ${OBJ_DIR}/*.d
 
 fclean: clean 
-	rm -f ./*.a
-	rm -f ${EXPORT_DIR}/${NAME}
+	rm -f ${NAME}
 	
 re: fclean all
 
-bonus : ${BIN_DIR} ${BONUS_OBJ_FILES} ${LIBFT_OBJ_FILES}
-	ar -rcsT ${NAME} ${LIBFT_OBJ_FILES} ${BONUS_OBJ_FILES}
-	cp ${BIN_DIR}/${NAME} ${EXPORT_DIR}/${NAME}
-	touch bonus
-
--include ${LIBFT_DEP_FILES} ${BONUS_DEP_FILES}
+-include ${DEP}
 
 .PHONY= all clean fclean re
 

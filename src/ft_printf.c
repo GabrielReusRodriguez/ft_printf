@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:30 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/02 13:50:18 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/05 00:04:31 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-static int ft_print_special_char(char c, va_list argp)
+static int	ft_print_special_char(char c, va_list argp)
 {
 	if (c == 'c')
 		return (ft_printf_char(argp));
@@ -30,28 +30,28 @@ static int ft_print_special_char(char c, va_list argp)
 	if (c == 'u')
 		return (ft_printf_usgn(argp));
 	if (c == 'x')
-		return (ft_printf_low_hex(argp));		
+		return (ft_printf_low_hex(argp));
 	if (c == 'X')
-		return (ft_printf_up_hex(argp));		
+		return (ft_printf_up_hex(argp));
 	if (c == '%')
 		return (ft_printf_percent());
 	return (0);
 }
 
-int ft_printf(char const *str, ...)
+int	ft_printf(char const *str, ...)
 {
-	va_list argp;
-	int     num_bytes;
-	size_t  i;
-	
+	va_list	argp;
+	int		num_bytes;
+	size_t	i;
+
 	num_bytes = 0;
 	i = 0;
 	va_start(argp, str);
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		if (str[i] != '%')
 		{
-			ft_putchar_fd(str[i],1);
+			ft_putchar_fd(str[i], 1);
 			num_bytes++;
 		}
 		else

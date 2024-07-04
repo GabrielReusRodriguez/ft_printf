@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/02 13:36:40 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/05 00:03:16 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ int	ft_printf_int(va_list argp)
 	num = ft_itoa(arg_value);
 	if (num != NULL)
 	{
-		num_bytes = ft_iputstr_fd(num,1);
+		num_bytes = ft_iputstr_fd(num, 1);
 		free (num);
 		return (num_bytes);
 	}
 	else
 		return (-1);
-	
 }

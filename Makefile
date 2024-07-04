@@ -1,78 +1,98 @@
 NAME  = libftprintf.a
-BONUS = libftprintf.a
-CC=cc
-CFLAGS=-Wall -Wextra -Werror -MMD -MP -g
-#CFLAGS= -g
 
-BIN_DIR=./bin
-#SRC_DIR=./src
-SRC_DIR=./bonus
-INC_DIR=./inc
+CC			=	cc
+CFLAGS		=	-Wall -Wextra -Werror -MMD -MP -g
+DEPFLAGS	=	-MMD -MP
 
-BONUS_SRC_DIR= ./bonus
+ifdef CSANITIZE
+	SANITIZE_FLAGS = -g -fsanitize=${CSANITIZE}
+endif
 
-LIBFT_HEADER=libft.h
-FT_PRINTF_HEADER=ft_printf.h
+OBJ_DIR	= ./obj
+SRC_DIR	= ./src
+INC_DIR	= ./inc
 
-LIBFT_DIR=./libft
-#LIBFT_LIB=${LIBFT_DIR}/libft.a
-LIBFT_LIB=${BIN_DIR}/libft.a
+BONUS_SRC_DIR	= ./bonus_src
+BONUS_INC_DIR	= ./bonus_inc
 
-SRC_FILES=$(wildcard ${SRC_DIR}/*.c)
-OBJ_FILES=$(SRC_FILES:${SRC_DIR}/%.c=${BIN_DIR}/%.o)
-DEP_FILES=$(SRC_FILES:${SRC_DIR}/%.c=${BIN_DIR}/%.d)
+LIBFT_DIR		= ./libft
+LIBFT_INC_DIR	= ${LIBFT_DIR}/inc
+LIBFT_LIB		= ${LIBFT_DIR}/libft.a
 
-BONUS_SRC_FILES=$(wildcard ${BONUS_SRC_DIR}/*.c)
-BONUS_OBJ_FILES=$(BONUS_SRC_FILES:${BONUS_SRC_DIR}/%.c=${BIN_DIR}/%.o)
-BONUS_DEP_FILES=$(BONUS_SRC_FILES:${BONUS_SRC_DIR}/%.c=${BIN_DIR}/%.d)
 
-all: ${LIBFT_LIB} ${NAME}
+SRC_FILES	=	ft_printf_char		\
+				ft_printf_dec		\
+				ft_printf_hex		\
+				ft_printf_int		\
+				ft_printf_low_hex	\
+				ft_printf_percent	\
+				ft_printf_ptr		\
+				ft_printf_str		\
+				ft_printf_up_hex	\
+				ft_printf_usgn		\
+				ft_printf
+
+BONUS_SRC_FILES =	ft_printf_char_bonus		\
+					ft_printf_dec_bonus			\
+					ft_printf_hex__bonus		\
+					ft_printf_int_bonus			\
+					ft_printf_low_hex_bonus		\
+					ft_printf_percent_bonus		\
+					ft_printf_ptr_bonus			\
+					ft_printf_str_bonus			\
+					ft_printf_up_hex_bonus		\
+					ft_printf_usgn_bonus		\
+					ft_printf_bonus
+
+SRC = $(addprefix ${SRC_DIR}/, $(addsuffix .c, ${SRC_FILES}))
+OBJ = $(addprefix ${OBJ_DIR}/, $(addsuffix .o, ${SRC_FILES}))
+DEP = $(addprefix ${OBJ_DIR}/, $(addsuffix .d, ${SRC_FILES}))
+
+BONUS_SRC = $(addprefix ${BONUS_SRC_DIR}/, $(addsuffix .c, ${BONUS_SRC_FILES}))
+BONUS_OBJ = $(addprefix ${OBJ_DIR}/, $(addsuffix .o, ${BONUS_SRC_FILES}))
+BONUS_DEP = $(addprefix ${OBJ_DIR}/, $(addsuffix .d, ${BONUS_SRC_FILES}))
+
+all: ${NAME}
+
+ifndef BONUS
+${NAME} : ${LIBFT_LIB} ${OBJ}
+	cp ${LIBFT_LIB} $@ 
+#	ar -csr $@ ${OBJ}
+	ar -csr $@ ${OBJ} 
+else
+${NAME} : ${LIBFT_LIB} ${BONUS_OBJ} 
+	cp ${LIBFT_LIB} $@
+#	ar -rcs ${NAME} ${LIBFT_LIB} ${BONUS_OBJ}
+	ar -csr $@ ${BONUS_OBJ} 
+endif
+
+libft:
+	make -C ${LIBFT_DIR} --no-print-directory
+
+#bonus: 
+#	@make BONUS=1 --no-print-directory
 
 ${LIBFT_LIB}:
-	make bonus -C ${LIBFT_DIR}
+	make -C ${LIBFT_DIR} --no-print-directory
 
-${NAME}: ${LIBFT_LIB} ${OBJ_FILES} 
-	ar -rcsT ${NAME}  ${BIN_DIR}/libft.a  ${OBJ_FILES} 
-#	cp ${SRC_DIR}/ft_printf_bonus.h ${INC_DIR}/ft_printf_bonus.h
-	cp ${SRC_DIR}/ft_printf.h ${INC_DIR}/ft_printf.h
+${OBJ_DIR}/%.o: ${SRC_DIR}/%.c Makefile
+	@mkdir -p ${OBJ_DIR}
+	${CC} ${CFLAGS} -I ${INC_DIR} -I ${LIBFT_INC_DIR} -o $@ -c $<
 
-${BIN_DIR}/%.o: ${SRC_DIR}/%.c Makefile
-	${CC} ${CFLAGS} -I ${INC_DIR} -o $@ -c $<
-
-${BIN_DIR}/%.o: ${BONUS_SRC_DIR}/%.c Makefile
-	${CC} ${CFLAGS} -I ${INC_DIR} -o $@ -c $<
-
-${BIN_DIR}:
-	mkdir -p ${BIN_DIR}
-
-#bonus: fclean ${LIBFT_LIB} ${BONUS_OBJ_FILES} 
-#	ar -rcsT ${NAME}  ${BIN_DIR}/libft.a  ${BONUS_OBJ_FILES} 
-#	cp ${BONUS_SRC_DIR}/ft_printf_bonus.h ${INC_DIR}/
-#	touch bonus
-
-#bonus: ${LIBFT_LIB} ${BONUS_OBJ_FILES}
-#	ar -rcsT ./libftprintf_bonus.a  ${BIN_DIR}/libft.a  ${BONUS_OBJ_FILES} 
-#	cp ${BONUS_SRC_DIR}/ft_printf_bonus.h ${INC_DIR}/
-#	touch bonus
-bonus : all
+${OBJ_DIR}/%.o: ${BONUS_SRC_DIR}/%.c Makefile
+	@mkdir -p ${OBJ_DIR}
+	${CC} ${CFLAGS} ${DEPFLAGS} ${SANITIZE_FLAGS} -I ${INC_DIR} -I ${LIBFT_INC_DIR} -o $@ -c $<
 
 clean:
-	rm -f ${BIN_DIR}/*.o
-	rm -f ${BIN_DIR}/*.d
-	make clean -C ${LIBFT_DIR}
+	rm -f ${OBJ_DIR}/*.o
+	rm -f ${OBJ_DIR}/*.d
+	make clean -C ${LIBFT_DIR} --no-print-directory
 
 fclean: clean
 	rm -f ${NAME}
-	make fclean -C ${LIBFT_DIR}
+	make fclean -C ${LIBFT_DIR} --no-print-directory
 
 re: fclean all
+-include ${DEP} ${BONUS_DEP}
 
--include ${DEP_FILES} ${BONUS_DEP_FILES}
-
-tests: ${LIBFT_LIB} ${NAME}
-	make -C ./tests/
-
-tests_re: ${LIBFT_LIB} ${NAME}
-	make re -C ./tests/
-
-.PHONY: all clean fclean re ${LIBFT_LIB} tests tests_re
+.PHONY: all clean fclean re bonus

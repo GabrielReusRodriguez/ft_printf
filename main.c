@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "ft_printf.h"
 
 int main(void)
@@ -6,14 +7,16 @@ int main(void)
     int value;
     int ft_value;
 
-    value = printf(" %p %p ", 0, 0);
+    value = printf(" %p %p ", NULL, NULL);
     printf("\n");
-    ft_value = ft_printf(" %p %p ", 0, 0);
+    ft_value = ft_printf(" %p %p ", NULL, NULL);
     printf("value = %d vs ft_value %d \n",value, ft_value);
 
+/*
     value = printf("_%-05%_");
     printf("\n");
     ft_value = ft_printf("_%-05%_");
     printf("value = %d vs ft_value %d \n",value, ft_value);
+ */
     return (0);
 }
