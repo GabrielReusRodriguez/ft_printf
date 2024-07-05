@@ -81,7 +81,7 @@ ${OBJ_DIR}/%.o: ${SRC_DIR}/%.c Makefile
 
 ${OBJ_DIR}/%.o: ${BONUS_SRC_DIR}/%.c Makefile
 	@mkdir -p ${OBJ_DIR}
-	${CC} ${CFLAGS} ${DEPFLAGS} ${SANITIZE_FLAGS} -I ${INC_DIR} -I ${LIBFT_INC_DIR} -o $@ -c $<
+	${CC} ${CFLAGS} ${DEPFLAGS} ${SANITIZE_FLAGS} -I ${BONUS_INC_DIR} -I ${LIBFT_INC_DIR} -o $@ -c $<
 
 clean:
 	rm -f ${OBJ_DIR}/*.o

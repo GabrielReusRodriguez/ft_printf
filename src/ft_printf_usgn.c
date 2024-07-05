@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_usgn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/05 00:02:33 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/05 12:38:01 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdarg.h>
 #include "libft.h"
 
-int	ft_printf_usgn(va_list argp)
+int	ft_printf_usgn(int fd, va_list argp)
 {
 	unsigned int	arg_value;
 	char			*ch_number;
@@ -24,7 +24,7 @@ int	ft_printf_usgn(va_list argp)
 	ch_number = ft_utoa(arg_value);
 	if (ch_number == NULL)
 		return (-1);
-	num_bytes = ft_iputstr_fd(ch_number, 1);
+	num_bytes = ft_iputstr_fd(ch_number, fd);
 	free (ch_number);
 	return (num_bytes);
 }

@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str_bonus.c                              :+:      :+:    :+:   */
+/*   ft_printf_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:09:17 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/02 14:32:15 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/05 12:37:27 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include "libft.h"
-#include "ft_printf_bonus.h"
 
-char	*ft_printf_str(va_list argp, t_format	*format)
+int	ft_printf_str(int fd, va_list argp)
 {
 	char	*str;
-	char	*argp_str;
-	size_t	size;
 
-	argp_str = va_arg(argp, char *);
-	if (argp_str == NULL)
-	{
-		size = 6 + 1;
-		str = ft_ptr_new_char_buffer(size);
-		if (str == NULL)
-			return (NULL);
-		ft_strlcpy(str, "(null)", size);
-	}
+	str = va_arg(argp, char *);
+	if (str != NULL)
+		return (ft_iputstr_fd(str, fd));
 	else
-		str = ft_strdup(argp_str);
-	if (str != NULL && format->n_width > 0)
-		str = ft_apply_width(str, format);
-	return (str);
+		return (ft_iputstr_fd("(null)", fd));
 }

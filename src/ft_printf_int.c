@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/05 00:03:16 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/05 12:36:01 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdarg.h>
 #include "libft.h"
 
-int	ft_printf_int(va_list argp)
+int	ft_printf_int(int fd, va_list argp)
 {
 	int		num_bytes;
 	int		arg_value;
@@ -25,7 +25,7 @@ int	ft_printf_int(va_list argp)
 	num = ft_itoa(arg_value);
 	if (num != NULL)
 	{
-		num_bytes = ft_iputstr_fd(num, 1);
+		num_bytes = ft_iputstr_fd(num, fd);
 		free (num);
 		return (num_bytes);
 	}

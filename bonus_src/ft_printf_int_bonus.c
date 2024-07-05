@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_int_bonus.c                              :+:      :+:    :+:   */
+/*   ft_printf_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/02 14:32:00 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/05 12:36:01 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stdarg.h>
 #include "libft.h"
-#include "ft_printf_bonus.h"
 
-char	*ft_printf_int(va_list argp, t_format	*format)
+int	ft_printf_int(int fd, va_list argp)
 {
+	int		num_bytes;
 	int		arg_value;
 	char	*num;
 
+	num_bytes = 0;
 	arg_value = va_arg(argp, int);
 	num = ft_itoa(arg_value);
 	if (num != NULL)
-		num = ft_apply_sign_format(num, arg_value >= 0, format);
-	if (num != NULL)
-		num = ft_apply_width(num, format);
-	return (num);
+	{
+		num_bytes = ft_iputstr_fd(num, fd);
+		free (num);
+		return (num_bytes);
+	}
+	else
+		return (-1);
 }

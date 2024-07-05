@@ -1,29 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_hex_bonus.c                              :+:      :+:    :+:   */
+/*   ft_printf_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:52:41 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/02 14:31:57 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/05 12:35:51 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
-#include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
 #include "libft.h"
-#include "ft_printf_bonus.h"
 
-char	*ft_printf_htoa(unsigned long u_number, unsigned int up_case, \
-				t_format	*format)
+static int	ft_number_2_hex(int fd, unsigned long u_number, bool up_case)
 {
-	char			*str;
+	char	start_digit;
+	int		num_bytes;
+	int		return_value;
 
-	str = ft_dtoh(u_number, up_case);
-	if (str != NULL)
-		str = ft_apply_hash_format(str, u_number, format);
-	if (str != NULL)
-		str = ft_apply_width(str, format);
-	return (str);
+	num_bytes = 0;
+	if (u_number < 10)
+		return (ft_iputchar_fd('0' + u_number, fd));
+	if (u_number < 16)
+	{
+		if (up_case == true)
+			start_digit = 'A';
+		else
+			start_digit = 'a';
+		return (ft_iputchar_fd(start_digit + (u_number - 10), fd));
+	}
+	return_value = ft_number_2_hex(fd, u_number / 16, up_case);
+	if (return_value < 0)
+		return (-1);
+	num_bytes = num_bytes + return_value;
+	return_value = ft_number_2_hex(fd, u_number % 16, up_case);
+	if (return_value < 0)
+		return (-1);
+	num_bytes = num_bytes + return_value;
+	return (num_bytes);
+}
+
+int	ft_printf_hex(int fd, unsigned long number, bool up_case)
+{
+	return (ft_number_2_hex(fd, number, up_case));
 }
