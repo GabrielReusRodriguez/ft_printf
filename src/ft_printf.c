@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:30 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/05 12:38:48 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/05 23:31:37 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,23 @@
 
 static int	ft_print_special_char(int fd, char c, va_list argp)
 {
-	if (c == 'c')
+	if (c == DATA_TYPE_CHAR)
 		return (ft_printf_char(fd, argp));
-	if (c == 's')
+	if (c == DATA_TYPE_STR)
 		return (ft_printf_str(fd, argp));
-	if (c == 'p')
+	if (c == DATA_TYPE_PTR)
 		return (ft_printf_ptr(fd, argp));
-	if (c == 'd')
+	if (c == DATA_TYPE_DEC)
 		return (ft_printf_dec(fd, argp));
-	if (c == 'i')
+	if (c == DATA_TYPE_INT)
 		return (ft_printf_int(fd, argp));
-	if (c == 'u')
+	if (c == DATA_TYPE_USG)
 		return (ft_printf_usgn(fd, argp));
-	if (c == 'x')
+	if (c == DATA_TYPE_HEX_LOW)
 		return (ft_printf_low_hex(fd, argp));
-	if (c == 'X')
+	if (c == DATA_TYPE_HEX_UP)
 		return (ft_printf_up_hex(fd, argp));
-	if (c == '%')
+	if (c == DATA_TYPE_PERCENT)
 		return (ft_printf_percent(fd));
 	return (0);
 }
@@ -67,7 +67,6 @@ int	ft_printf_fd(int fd, char const *str, ...)
 	return (num_bytes);
 }
 
-
 int	ft_printf(char const *str, ...)
 {
 	va_list	argp;
@@ -86,7 +85,7 @@ int	ft_printf(char const *str, ...)
 		}
 		else
 		{
-			num_bytes = num_bytes + ft_print_special_char(STDOUT_FILENO, str[i + 1], argp);
+			num_bytes += ft_print_special_char(STDOUT_FILENO, str[i + 1], argp);
 			i++;
 		}
 		i++;

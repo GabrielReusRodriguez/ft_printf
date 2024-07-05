@@ -32,9 +32,10 @@ SRC_FILES	=	ft_printf_char		\
 				ft_printf_usgn		\
 				ft_printf
 
-BONUS_SRC_FILES =	ft_printf_char_bonus		\
+BONUS_SRC_FILES =	ft_format_bonus				\
+					ft_printf_char_bonus		\
 					ft_printf_dec_bonus			\
-					ft_printf_hex__bonus		\
+					ft_printf_hex_bonus		\
 					ft_printf_int_bonus			\
 					ft_printf_low_hex_bonus		\
 					ft_printf_percent_bonus		\
@@ -69,8 +70,8 @@ endif
 libft:
 	make -C ${LIBFT_DIR} --no-print-directory
 
-#bonus: 
-#	@make BONUS=1 --no-print-directory
+bonus: 
+	@make BONUS=1 --no-print-directory
 
 ${LIBFT_LIB}:
 	make -C ${LIBFT_DIR} --no-print-directory

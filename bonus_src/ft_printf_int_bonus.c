@@ -1,20 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_int.c                                    :+:      :+:    :+:   */
+/*   ft_printf_int_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/05 12:36:01 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/06 00:33:46 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdarg.h>
 #include "libft.h"
+#include "ft_printf_bonus.h"
 
-int	ft_printf_int(int fd, va_list argp)
+static int	ft_format_plus(int fd, int value, t_format format)
+{
+	if (format.b_plus)
+	{
+		if (value >= 0)
+			return (ft_iputchar_fd('+', fd));
+	}
+	return (0);
+
+}
+
+static int	ft_format_space(int fd, int value, t_format format)
+{
+	if (format.b_space && !format.b_plus)
+	{
+		if (value >= 0)
+			return (ft_iputchar_fd(' ', fd));
+	}
+	return (0);
+
+}
+
+//First we treat the sign flags.
+int	ft_printf_int(int fd, va_list argp, t_format format)
 {
 	int		num_bytes;
 	int		arg_value;
@@ -25,7 +49,9 @@ int	ft_printf_int(int fd, va_list argp)
 	num = ft_itoa(arg_value);
 	if (num != NULL)
 	{
-		num_bytes = ft_iputstr_fd(num, fd);
+		num_bytes+= ft_format_plus(fd, arg_value, format);
+		num_bytes+= ft_format_space(fd, arg_value, format);
+		num_bytes+= ft_iputstr_fd(num, fd);
 		free (num);
 		return (num_bytes);
 	}

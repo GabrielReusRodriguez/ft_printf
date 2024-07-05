@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_usgn.c                                   :+:      :+:    :+:   */
+/*   ft_printf_usgn_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/05 12:38:01 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/06 00:37:09 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdarg.h>
 #include "libft.h"
+#include "ft_printf_bonus.h"
 
-int	ft_printf_usgn(int fd, va_list argp)
+/*Sign flags + and space do not have sense with unsigned . When we compile it gives you a "warning"*/
+int	ft_printf_usgn(int fd, va_list argp, t_format format)
 {
 	unsigned int	arg_value;
 	char			*ch_number;
 	int				num_bytes;
 
+	(void)format;
 	arg_value = va_arg(argp, unsigned int);
 	ch_number = ft_utoa(arg_value);
 	if (ch_number == NULL)
