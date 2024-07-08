@@ -104,6 +104,20 @@ int main(void)
     printf("value = %d vs ft_value %d \n",value, ft_value);
 
 
+    value = printf("p %p %p ", &value, &ft_value);
+    printf("\n");
+    ft_value = ft_printf("p %p %p ", &value, &ft_value);
+    printf("\n");
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+
+    //Width
+    
+    value = printf("u %5u %5u ", 0, 0);
+    printf("\n");
+    ft_value = ft_printf("u %5u %5u ", 0, 0);
+    printf("\n");
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+
     /*PTRS test*/
 /*
     value = printf(" %p %p ", NULL, NULL);

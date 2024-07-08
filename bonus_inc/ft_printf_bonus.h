@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:57 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/06 00:22:01 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/08 22:55:29 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@
 # define DATA_TYPE_PERCENT	'%'
 
 # define SUPORTED_TYPES "cspdiuxX%"
+
+# define FORMAT_WIDTH_INIT 0
+# define FORMAT_PRECISION_INIT 0
 
 typedef struct s_format
 {

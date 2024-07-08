@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:36 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/06 00:45:43 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/08 22:50:31 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 /*Sign flags + and space do not have sense with percent . When we compile it gives you a "warning"*/
 int	ft_printf_percent(int fd, t_format format)
 {
+	char	*str;
+
 	(void)format;
-	return (ft_iputchar_fd('%', fd));
+	str = ft_strdup("%");
+	if (str == NULL)
+		return (-1);
+	return (ft_iputstr_fd(str, fd));
 }

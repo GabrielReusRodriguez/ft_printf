@@ -56,22 +56,23 @@ BONUS_DEP = $(addprefix ${OBJ_DIR}/, $(addsuffix .d, ${BONUS_SRC_FILES}))
 all: ${NAME}
 
 ifndef BONUS
-${NAME} : ${LIBFT_LIB} ${OBJ}
-	cp ${LIBFT_LIB} $@ 
-#	ar -csr $@ ${OBJ}
-	ar -csr $@ ${OBJ} 
-else
+#${NAME} : ${LIBFT_LIB} ${OBJ}
+#	cp ${LIBFT_LIB} $@ 
+#	ar -csr $@ ${OBJ} 
 ${NAME} : ${LIBFT_LIB} ${BONUS_OBJ} 
 	cp ${LIBFT_LIB} $@
-#	ar -rcs ${NAME} ${LIBFT_LIB} ${BONUS_OBJ}
-	ar -csr $@ ${BONUS_OBJ} 
+	ar -csr $@ ${BONUS_OBJ}
+else
+#${NAME} : ${LIBFT_LIB} ${BONUS_OBJ} 
+#	cp ${LIBFT_LIB} $@
+#	ar -csr $@ ${BONUS_OBJ} 
 endif
 
 libft:
 	make -C ${LIBFT_DIR} --no-print-directory
 
-bonus: 
-	@make BONUS=1 --no-print-directory
+#bonus: 
+#	@make BONUS=1 --no-print-directory
 
 ${LIBFT_LIB}:
 	make -C ${LIBFT_DIR} --no-print-directory

@@ -6,7 +6,7 @@
 #    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/04 01:34:53 by greus-ro          #+#    #+#              #
-#    Updated: 2024/07/05 01:11:40 by gabriel          ###   ########.fr        #
+#    Updated: 2024/07/08 22:59:02 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ LIBFT_SRC_FILES=	ft_atoi			\
 					ft_islower		\
 					ft_isupper		\
 					ft_isprint		\
+					ft_htoa			\
 					ft_itoa			\
 					ft_memchr		\
 					ft_memcmp		\

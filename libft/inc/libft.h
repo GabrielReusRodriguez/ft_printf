@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 20:37:22 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/14 22:16:12 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/08 23:29:06 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdbool.h>
 
 int		ft_atoi(const char *nbr);
 void	ft_bzero(void *s, size_t n);
@@ -27,6 +28,7 @@ int		ft_islower(int c);
 int		ft_isprint(int c);
 int		ft_isupper(int c);
 char	*ft_itoa(int n);
+char	*ft_htoa(unsigned long long num, bool upcase);
 char	*ft_utoa(unsigned int n);
 
 void	*ft_memcpy(void	*dest, const void *src, size_t n);
