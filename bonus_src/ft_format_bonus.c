@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_format_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 21:43:40 by gabriel           #+#    #+#             */
-/*   Updated: 2024/07/08 22:56:24 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/09 08:35:15 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 #include "ft_printf_bonus.h"
@@ -41,7 +42,7 @@ static int	ft_format_get_width(const char *str, size_t *i, t_format *format)
 	int		num;
 
 	offset = 0;
-	while(str[*i + offset]  != '\0' || ft_isdigit(str[*i]) == 1)
+	while(str[*i + offset]  != '\0' && ft_isdigit(str[*i + offset]) == 1)
 		offset++;
 	substr = ft_substr(str, *i, offset);
 	if (substr == NULL)
@@ -82,7 +83,10 @@ void	*ft_format_get(const char *str, t_format *format)
 	{
 		if (str[j] != '0' && ft_isdigit(str[j]) == 1 && \
 				format->n_width == FORMAT_WIDTH_INIT)
-			ft_format_get_width(str, &j, format);
+			{
+				ft_format_get_width(str, &j, format);
+				continue;
+			}
 		if (str[j] == '-')
 			format->b_minus = true;
 		if (str[j] == '0')

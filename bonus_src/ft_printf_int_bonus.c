@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_int_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/08 23:34:45 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/09 12:15:39 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,26 @@ static int	ft_format_prefix(int value, t_format format, char **num)
 	return (0);
 }
 
+static	int	ft_format_precisition(unsigned int value, t_format format, char **str)
+{
+	(void)value;
+	(void)str;
+	if (format.n_precision > 0)
+	{
+
+	}
+	return (0);
+}
+
+static	int	ft_format_width(unsigned int value, t_format format, char **str)
+{	
+	if (ft_format_padding(value, format, str) < 0)
+		return (-1);
+	if (ft_format_precisition(value, format, str) < 0)
+		return (-1);
+	return (0);
+}
+
 //First we treat the sign flags.
 int	ft_printf_int(int fd, va_list argp, t_format format)
 {
@@ -72,6 +92,8 @@ int	ft_printf_int(int fd, va_list argp, t_format format)
 	if (num != NULL)
 	{
 		if (ft_format_prefix(arg_value, format, &num) ==  -1)
+			return (free (num), -1);
+		if (ft_format_width(arg_value, format, &num) < 0)
 			return (free (num), -1);
 		num_bytes = ft_iputstr_fd(num, fd);
 		free (num);

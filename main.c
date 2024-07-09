@@ -8,6 +8,7 @@ int main(void)
     int ft_value;
 
     /*Int tests*/
+    /*
     printf("PLUS **********************\n");
     value = printf(" %+d %d ", 5, 5);
     printf("\n");
@@ -109,14 +110,46 @@ int main(void)
     ft_value = ft_printf("p %p %p ", &value, &ft_value);
     printf("\n");
     printf("value = %d vs ft_value %d \n",value, ft_value);
-
+*/
     //Width
-    
-    value = printf("u %5u %5u ", 0, 0);
-    printf("\n");
-    ft_value = ft_printf("u %5u %5u ", 0, 0);
-    printf("\n");
+    /*
+    value = printf("ua %5u %5u \n", 0, 1);
+    //value = 1;
+    ft_value = ft_printf("ub %5u %5u \n", 0, 1);
+    //ft_value = ft_printf("au %5u \n", 0);
     printf("value = %d vs ft_value %d \n",value, ft_value);
+    */
+    /*
+    printf("%5c\n",'r');
+    printf("%05c\n",'a');
+    printf("%7X\n", 33);
+    printf("%3X\n",0);
+    printf("%5X\n", 52625);
+    printf("a%s\n", NULL);
+    ft_printf("b%s\n", NULL);
+    */
+    value = printf("a%23s\n", NULL);
+    fflush(stdout); 
+    ft_value = ft_printf("b%23s\n", NULL);
+    fflush(stdout); 
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout); 
+    
+    value = printf("a%16s\n", "nark nark");
+    fflush(stdout);
+    ft_value = ft_printf("b%16s\n", "nark nark");
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+    value = printf("a%5s\n", "goes over");
+    fflush(stdout);
+    ft_value = ft_printf("b%5s\n", "goes over");
+    fflush(stdout);
+    value = printf("a%2s\n", NULL);
+    fflush(stdout);
+    ft_value = ft_printf("b%2s\n", NULL);
+    fflush(stdout);
+
+
 
     /*PTRS test*/
 /*

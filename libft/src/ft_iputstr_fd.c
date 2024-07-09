@@ -6,7 +6,7 @@
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 00:31:02 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/01/14 22:38:18 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/09 12:54:12 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int	ft_iputstr_fd(char *s, int fd)
 	while (s[i] != '\0')
 	{
 		char_num_bytes = ft_iputchar_fd(s[i], fd);
-		if (char_num_bytes >= 0)
+		if (char_num_bytes < 0)
+			return (-1);
+		else
 			total_num_bytes = total_num_bytes + char_num_bytes;
 		i++;
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:57 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/08 22:55:29 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/09 12:08:48 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,7 @@ int			ft_printf_low_hex(int fd, va_list argp, t_format format);
 int			ft_printf_up_hex(int fd, va_list argp, t_format format);
 int			ft_printf_percent(int fd, t_format format);
 void		*ft_format_get(char const *str, t_format *format);
+
+int			ft_format_padding(unsigned int value, t_format format, char **str);
 
 #endif
