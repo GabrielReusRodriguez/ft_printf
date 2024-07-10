@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 21:43:40 by gabriel           #+#    #+#             */
-/*   Updated: 2024/07/11 00:14:23 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 01:39:18 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static	void	ft_format_init(t_format *format)
 	format->b_hash = false;
 	format->b_minus = false;
 	format->b_plus = false;
-	format->b_precision = false;
+//	format->b_precision = false;
 	format->b_space = false;
 	format->b_zero = false;
 	format->c_conv_type = ' ';

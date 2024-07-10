@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:57 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 00:42:26 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 01:38:49 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ typedef struct s_format
 	bool		b_hash;
 	bool		b_space;
 	bool		b_plus;
-	bool		b_precision;
+//	bool		b_precision;
 	int			n_precision;
 	size_t		n_width;
 	char		c_conv_type;

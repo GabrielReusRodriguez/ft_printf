@@ -216,16 +216,25 @@ int main(void)
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
 */  
+/*
     value = printf("%.6i\n", -3);
     fflush(stdout);
     ft_value = ft_printf("%.6i\n", -3);
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
-
-    value = printf("%7i\n", -14);
+    */
+   /*
+    value = printf("%08.3i\n", 8375);
     fflush(stdout);
-    ft_value = ft_printf("%7i\n", -14);
+    ft_value = ft_printf("%08.3i\n", 8375);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+    */
+    value = printf("%07d\n", -54);
+    fflush(stdout);
+    ft_value = ft_printf("%07d\n", -54);
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);

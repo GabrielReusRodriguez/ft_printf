@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 12:06:09 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 00:42:01 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 01:41:01 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 #include "libft.h"
 #include "ft_printf_bonus.h"
 
+#include <stdio.h>
+/*
+If we geet precision with numeric conversion, zero flag is ignored.
+*/
 int	ft_format_padding(t_format format, char **str)
 {
 	char	*padding;
@@ -22,6 +26,8 @@ int	ft_format_padding(t_format format, char **str)
 	int		len;
 	char	padding_char;
 
+	if (ft_strchr(NUMERIC_CONVERSION, format.c_conv_type) != NULL && format.b_dot)
+		format.b_zero = false;
 	if (format.n_width > 0)
 	{
 		if (format.b_zero)
