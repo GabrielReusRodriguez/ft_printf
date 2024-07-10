@@ -128,6 +128,7 @@ int main(void)
     printf("a%s\n", NULL);
     ft_printf("b%s\n", NULL);
     */
+   /*
     value = printf("a%23s\n", NULL);
     fflush(stdout); 
     ft_value = ft_printf("b%23s\n", NULL);
@@ -143,12 +144,63 @@ int main(void)
     value = printf("a%5s\n", "goes over");
     fflush(stdout);
     ft_value = ft_printf("b%5s\n", "goes over");
+    printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
     value = printf("a%2s\n", NULL);
     fflush(stdout);
     ft_value = ft_printf("b%2s\n", NULL);
     fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
 
+    */
+
+    //Precision  *******************************************
+
+    value = printf("_%.u_\n", 1000);
+    fflush(stdout);
+    ft_value = ft_printf("_%.u_\n", 1000);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+    value = printf("%.10u\n", 2000);
+    fflush(stdout);
+    ft_value = printf("%.10u\n", 2000);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+    value = printf("%-.10u\n", 3000);
+    fflush(stdout);
+    ft_value = ft_printf("%-.10u\n", 3000);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+    value = printf("%20u\n", 4000);
+    fflush(stdout);
+    ft_value = ft_printf("%20u\n", 4000);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+    value = printf("%20.10u\n", 5000);
+    fflush(stdout);
+    ft_value = ft_printf("%20.10u\n", 5000);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+/*
+    printf("%+.d\n", 1000);
+    printf("%+.10d\n", 1000);
+    printf("%-.10d\n", 1000);
+    printf("%.10d\n", -1000);
+    printf("%-.10d\n", -1000);
+    printf("%20d\n", 1000);
+    printf("%20.10d\n", 1000);
+*/
 
 
     /*PTRS test*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:57 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/09 12:08:48 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/07/11 00:06:53 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@
 # define DATA_TYPE_PERCENT	'%'
 
 # define SUPORTED_TYPES "cspdiuxX%"
+# define NUMERIC_CONVERSION "diuxX"
 
 # define FORMAT_WIDTH_INIT 0
-# define FORMAT_PRECISION_INIT 0
+# define FORMAT_PRECISION_INIT -1
 
 typedef struct s_format
 {
@@ -41,7 +42,7 @@ typedef struct s_format
 	bool		b_space;
 	bool		b_plus;
 	bool		b_precision;
-	size_t		n_precision;
+	int			n_precision;
 	size_t		n_width;
 	char		c_conv_type;
 	size_t		len;
@@ -63,5 +64,6 @@ int			ft_printf_percent(int fd, t_format format);
 void		*ft_format_get(char const *str, t_format *format);
 
 int			ft_format_padding(unsigned int value, t_format format, char **str);
+int			ft_format_precision(t_format format, char **str);
 
 #endif
