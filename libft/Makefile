@@ -6,7 +6,7 @@
 #    By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/04 01:34:53 by greus-ro          #+#    #+#              #
-#    Updated: 2024/07/08 22:59:02 by gabriel          ###   ########.fr        #
+#    Updated: 2024/07/11 01:02:33 by gabriel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ LIBFT_SRC_FILES=	ft_atoi			\
 					ft_strlcpy		\
 					ft_strlen		\
 					ft_strmapi		\
+					ft_strcmp		\
 					ft_strncmp		\
 					ft_strnstr		\
 					ft_strrchr		\

@@ -201,6 +201,7 @@ int main(void)
     printf("%20d\n", 1000);
     printf("%20.10d\n", 1000);
 */
+/*
     value = printf("_%.s_\n", NULL);
     fflush(stdout);
     ft_value = ft_printf("_%.s_\n", NULL);
@@ -214,7 +215,29 @@ int main(void)
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
+*/  
+    value = printf("%.6i\n", -3);
+    fflush(stdout);
+    ft_value = ft_printf("%.6i\n", -3);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
 
+    value = printf("%7i\n", -14);
+    fflush(stdout);
+    ft_value = ft_printf("%7i\n", -14);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+/*
+    value = printf("_%.1d_\n", 51);
+    fflush(stdout);
+    ft_value = ft_printf("_%.1d_\n", 51);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+*/
 
     /*PTRS test*/
 /*

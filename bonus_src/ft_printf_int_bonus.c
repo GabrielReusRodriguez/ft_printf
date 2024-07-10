@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 00:45:37 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 01:19:40 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,39 +51,64 @@ static int	ft_format_space(int value, t_format format, char **num)
 	return (0);
 }
 
+/* If  value is < 0 we ALWAYS show the minus.
+if not, it depends of flags*/
 static int	ft_format_prefix(int value, t_format format, char **num)
 {
-	if (ft_format_plus(value, format, num) < 0)
-		return (-1);
-	if (ft_format_space(value, format, num) < 0)
-		return (-1);
+	char	*formated_num;
+	
+	if (value < 0)
+	{
+		formated_num = ft_strjoin("-", *num);
+		if (formated_num == NULL)
+			return (-1);
+		free (*num);
+		*num = formated_num;
+	}
+	else
+	{
+		if (ft_format_plus(value, format, num) < 0)
+			return (-1);
+		if (ft_format_space(value, format, num) < 0)
+			return (-1);
+	}
 	return (0);
 }
-
+/*
 static	int	ft_format_width(t_format format, char **str)
 {	
-	if (ft_format_precision(format, str) < 0)
-		return (-1);
 	if (ft_format_padding(format, str) < 0)
 		return (-1);
 	return (0);
 }
+*/
 
-//First we treat the sign flags.
+/*
+	First we add the less weitgh numbers, then we add the sign and finally we check padding.
+*/
 int	ft_printf_int(int fd, va_list argp, t_format format)
 {
 	int		num_bytes;
 	int		arg_value;
 	char	*num;
+	int		pos_num;
 
 	arg_value = va_arg(argp, int);
-	num = ft_itoa(arg_value);
+	if (arg_value < 0)
+		pos_num = -arg_value;
+	else
+		pos_num = arg_value;
+	num = ft_itoa(pos_num);
 	if (num != NULL)
 	{
-		if (ft_format_width(format, &num) < 0)
-			return (free (num), -1);
+		if (ft_format_precision(format, &num) < 0)
+			return (-1);
 		if (ft_format_prefix(arg_value, format, &num) ==  -1)
 			return (free (num), -1);
+		if (ft_format_padding(format, &num) < 0)
+			return (-1);
+//		if (ft_format_width(format, &num) < 0)
+//			return (free (num), -1);
 		num_bytes = ft_iputstr_fd(num, fd);
 		free (num);
 		return (num_bytes);

@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 19:34:00 by gabriel           #+#    #+#             */
-/*   Updated: 2024/07/11 00:47:05 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 01:06:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ static int	ft_format_string_precision(t_format format, char **str)
 /* with numeric format and precision is informed, 0 flag is ignored*/
 /* If it is numeric, we force the b_minus false and b_zero true flags 
 because we have to add zeros to the left (less significant numbers)*/
+/*Special case %.d with value 0 is an empty string*/
 static int	ft_format_numeric_precision(t_format format, char **str)
 {
 	char	padding_char;
@@ -44,9 +45,17 @@ static int	ft_format_numeric_precision(t_format format, char **str)
 
 	format.b_zero = true;
 	format.b_minus = false;	
-	if (format.n_precision > 0)
+	if (format.n_precision >= 0)
 	{
-
+		if (ft_strcmp(*str,"0") == 0 && format.n_precision == 0)
+		{
+			formated_str = ft_strdup("");
+			if (formated_str == NULL)
+				return (-1);
+			free (*str);
+			*str = formated_str;
+			return (0);	
+		}
 		if (format.b_zero)
 			padding_char = '0';
 		else
