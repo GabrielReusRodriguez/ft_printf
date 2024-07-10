@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 00:20:01 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 00:46:03 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 #include "ft_printf_bonus.h"
 
 /* Printf always applies first precision and after width*/
-static	int	ft_format_width(unsigned int value, t_format format, char **str)
+static	int	ft_format_width(t_format format, char **str)
 {
 	if (ft_format_precision(format, str) < 0)
 		return (-1);
-	if (ft_format_padding(value, format, str) < 0)
+	if (ft_format_padding(format, str) < 0)
 		return (-1);
 	return (0);
 }
@@ -38,7 +38,7 @@ int	ft_printf_usgn(int fd, va_list argp, t_format format)
 	ch_number = ft_utoa(arg_value);
 	if (ch_number == NULL)
 		return (-1);
-	if (ft_format_width(arg_value, format, &ch_number) < 0)
+	if (ft_format_width(format, &ch_number) < 0)
 		return (free (ch_number), -1);
 	num_bytes = ft_iputstr_fd(ch_number, fd);
 	free (ch_number);

@@ -156,7 +156,7 @@ int main(void)
     */
 
     //Precision  *******************************************
-
+/*
     value = printf("_%.u_\n", 1000);
     fflush(stdout);
     ft_value = ft_printf("_%.u_\n", 1000);
@@ -191,7 +191,7 @@ int main(void)
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
-
+*/
 /*
     printf("%+.d\n", 1000);
     printf("%+.10d\n", 1000);
@@ -201,6 +201,19 @@ int main(void)
     printf("%20d\n", 1000);
     printf("%20.10d\n", 1000);
 */
+    value = printf("_%.s_\n", NULL);
+    fflush(stdout);
+    ft_value = ft_printf("_%.s_\n", NULL);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+    value = printf("_%.s_\n", NULL);
+    fflush(stdout);
+    ft_value = ft_printf("_%.s_\n", NULL);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
 
 
     /*PTRS test*/

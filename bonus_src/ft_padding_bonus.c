@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 12:06:09 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 00:18:49 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 00:42:01 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 #include "libft.h"
 #include "ft_printf_bonus.h"
 
-int	ft_format_padding(unsigned int value, t_format format, char **str)
+int	ft_format_padding(t_format format, char **str)
 {
 	char	*padding;
 	char	*formated_str;
 	int		len;
 	char	padding_char;
 
-	(void)value;
 	if (format.n_width > 0)
 	{
 		if (format.b_zero)
