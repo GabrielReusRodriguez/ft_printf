@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "ft_printf_bonus.h"
+#include <limits.h>
 
 int main(void)
 {
@@ -246,10 +247,10 @@ int main(void)
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
-  */      
-    value = printf("%8.5x\n", 34);
+  */     
+    value = printf("%5c", '\0');
     fflush(stdout);
-    ft_value = ft_printf("%8.5x\n", 34);
+    ft_value = ft_printf("%5c", '\0');
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);

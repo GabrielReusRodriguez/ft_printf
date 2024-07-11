@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 22:49:30 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 23:35:47 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ static int	ft_format_prefix(int value, t_format format, char **num)
 	return (0);
 }
 
+#include <stdio.h>
 /*
 	We have to look, if the padding is with 0s  we have to put de zeros and then 
 	the minus signus in front.
@@ -83,17 +84,20 @@ static int	ft_format_prefix(int value, t_format format, char **num)
 */
 int	ft_printf_int(int fd, va_list argp, t_format format)
 {
-	int		num_bytes;
-	int		arg_value;
-	char	*num;
-	int		pos_num;
+	int					num_bytes;
+	int					arg_value;
+	char				*num;
+//	int		pos_num;
+	unsigned int		pos_num;
+
 
 	arg_value = va_arg(argp, int);
 	if (arg_value < 0)
-		pos_num = -arg_value;
+		pos_num = arg_value * (-1);
 	else
 		pos_num = arg_value;
-	num = ft_itoa(pos_num);
+	num = ft_utoa(pos_num);
+//	num = ft_itoa(pos_num);
 	if (num != NULL)
 	{
 		if (format.b_dot)
