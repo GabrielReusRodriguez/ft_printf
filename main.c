@@ -232,13 +232,37 @@ int main(void)
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
     */
+/*
+    value = printf("%7.4i\n", -14);
+    fflush(stdout);
+    ft_value = ft_printf("%7.4i\n", -14);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
     value = printf("%07d\n", -54);
     fflush(stdout);
     ft_value = ft_printf("%07d\n", -54);
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
+  */  
 
+    value = printf("%7.5s\n", "bombastic");
+    fflush(stdout);
+    ft_value = ft_printf("%7.5s\n", "bombastic");
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+/*
+    value = printf("%i\n", -54);
+    fflush(stdout);
+    ft_value = ft_printf("%i\n", -54);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+*/
 /*
     value = printf("_%.1d_\n", 51);
     fflush(stdout);

@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:52:41 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 00:44:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 22:54:15 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	ft_format_hashtag(bool up_case, t_format format, char **str)
 
 static	int	ft_format_width(t_format format, char **str)
 {	
-	if (ft_format_padding(format, str) < 0)
+	if (ft_format_padding(format, str, false) < 0)
 		return (-1);
 	if (ft_format_precision(format, str) < 0)
 		return (-1);
@@ -55,6 +55,8 @@ int	ft_printf_hex(int fd, unsigned long number, bool up_case, t_format format)
 	str = ft_htoa(number, up_case);
 	if (str == NULL)
 		return (-1);
+	if (format.b_dot)
+		format.b_zero = false;
 	if (ft_format_hashtag(up_case, format, &str) < 0)
 		return (free(str), -1);
 	if (ft_format_width(format, &str) < 0)

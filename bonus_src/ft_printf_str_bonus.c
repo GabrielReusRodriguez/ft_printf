@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:09:17 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 00:46:26 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 22:58:05 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ static	int	ft_format_width(t_format format, char **str)
 {	
 	format.b_zero = false;
 	format.b_space = true;
-	if (ft_format_padding(format, str) < 0)
-		return (-1);
 	if (ft_format_precision(format, str) < 0)
+		return (-1);
+	if (ft_format_padding(format, str, false) < 0)
 		return (-1);
 	return (0);
 }
@@ -36,7 +36,6 @@ int	ft_printf_str(int fd, va_list argp, t_format format)
 	char	*arg;
 	int		num_bytes;
 
-	(void)format;
 	arg = va_arg(argp, char *);
 	if (arg != NULL)
 		str = ft_strdup(arg);
