@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:52:41 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 22:54:15 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 23:16:43 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ static int	ft_format_hashtag(bool up_case, t_format format, char **str)
 
 static	int	ft_format_width(t_format format, char **str)
 {	
-	if (ft_format_padding(format, str, false) < 0)
-		return (-1);
 	if (ft_format_precision(format, str) < 0)
+		return (-1);
+	if (ft_format_padding(format, str, false) < 0)
 		return (-1);
 	return (0);
 }

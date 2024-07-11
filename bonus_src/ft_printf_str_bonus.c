@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:09:17 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 22:58:05 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/11 23:01:33 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 /*Sign flags + and space do not have sense with strings . When we compile it gives you a "warning"*/
 /*The 0 flag does not apply to strings.*/
-
+/* First we applu precision ( cut until n chars) and then apply width fill up to width.*/
 static	int	ft_format_width(t_format format, char **str)
 {	
 	format.b_zero = false;

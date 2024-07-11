@@ -246,15 +246,13 @@ int main(void)
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
-  */  
-
-    value = printf("%7.5s\n", "bombastic");
+  */      
+    value = printf("%8.5x\n", 34);
     fflush(stdout);
-    ft_value = ft_printf("%7.5s\n", "bombastic");
+    ft_value = ft_printf("%8.5x\n", 34);
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
-
 /*
     value = printf("%i\n", -54);
     fflush(stdout);
