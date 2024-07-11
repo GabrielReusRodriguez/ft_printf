@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:57 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 22:08:07 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/12 00:40:05 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ typedef struct s_format
 	bool		b_hash;
 	bool		b_space;
 	bool		b_plus;
-//	bool		b_precision;
 	int			n_precision;
 	size_t		n_width;
 	char		c_conv_type;
@@ -63,7 +62,7 @@ int			ft_printf_up_hex(int fd, va_list argp, t_format format);
 int			ft_printf_percent(int fd, t_format format);
 void		*ft_format_get(char const *str, t_format *format);
 
-int			ft_format_padding(t_format format, char **str, bool sign_print);
+int			ft_format_width(t_format format, char **str, bool sign_print);
 int			ft_format_precision(t_format format, char **str);
 
 #endif

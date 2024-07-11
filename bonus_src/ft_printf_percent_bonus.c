@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:36 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/08 22:50:31 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/12 00:34:45 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include "libft.h"
 #include "ft_printf_bonus.h"
 
-/*Sign flags + and space do not have sense with percent . When we compile it gives you a "warning"*/
+/*Sign flags + and space do not have sense with percent . 
+	When we compile it gives you a "warning"*/
 int	ft_printf_percent(int fd, t_format format)
 {
 	char	*str;

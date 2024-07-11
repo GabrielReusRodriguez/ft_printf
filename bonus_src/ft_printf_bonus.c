@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:30 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/10 23:42:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/12 00:33:36 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_print_special_char(int fd, char const *str, size_t *i, \
 
 	if (ft_format_get(str + *i, &format) == NULL)
 		return (-1);
-	*i += format.len; 
+	*i += format.len;
 	if (format.c_conv_type == DATA_TYPE_CHAR)
 		return (ft_printf_char(fd, argp, format));
 	if (format.c_conv_type == DATA_TYPE_STR)

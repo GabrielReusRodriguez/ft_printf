@@ -33,7 +33,7 @@ SRC_FILES	=	ft_printf_char		\
 				ft_printf
 
 BONUS_SRC_FILES =	ft_format_bonus				\
-					ft_padding_bonus			\
+					ft_width_bonus				\
 					ft_precision_bonus			\
 					ft_printf_char_bonus		\
 					ft_printf_dec_bonus			\

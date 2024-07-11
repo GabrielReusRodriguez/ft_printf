@@ -6,28 +6,28 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 22:53:23 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/12 00:30:59 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
 #include "libft.h"
 #include "ft_printf_bonus.h"
 
-/* Printf always applies first precision and after width*/
-static	int	ft_format_width(t_format format, char **str)
+static int	ft_format(t_format format, char **str)
 {
 	if (ft_format_precision(format, str) < 0)
 		return (-1);
-	if (ft_format_padding(format, str, false) < 0)
+	if (ft_format_width(format, str, false) < 0)
 		return (-1);
 	return (0);
 }
 
-/*Sign flags + and space do not have sense with unsigned . When we compile it gives you a "warning"*/
+/*Sign flags + and space do not have sense with unsigned . 
+	When we compile it gives you a "warning"*/
+/* We add first precision and then we fill up to width.*/
 int	ft_printf_usgn(int fd, va_list argp, t_format format)
 {
 	unsigned int	arg_value;
@@ -40,7 +40,7 @@ int	ft_printf_usgn(int fd, va_list argp, t_format format)
 		return (-1);
 	if (format.b_dot)
 		format.b_zero = false;
-	if (ft_format_width(format, &ch_number) < 0)
+	if (ft_format(format, &ch_number) < 0)
 		return (free (ch_number), -1);
 	num_bytes = ft_iputstr_fd(ch_number, fd);
 	free (ch_number);

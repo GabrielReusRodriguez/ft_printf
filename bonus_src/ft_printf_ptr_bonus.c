@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:39 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/08 23:29:48 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/12 00:22:55 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 #include "libft.h"
 #include "ft_printf_bonus.h"
 
-/*Sign flags + and space do not have sense with PTR . When we compile it gives you a "warning"*/
-
+/*Sign flags + and space do not have sense with PTR . 
+	When we compile it gives you a "warning"*/
 int	ft_printf_ptr(int fd, va_list argp, t_format format)
 {
 	int		num_bytes;
@@ -38,12 +38,11 @@ int	ft_printf_ptr(int fd, va_list argp, t_format format)
 		hex_str = ft_htoa((unsigned long long)ptr, false);
 		if (hex_str == NULL)
 			return (-1);
-		formated_hex = ft_strjoin("0x",hex_str);
-		free(hex_str);
+		formated_hex = ft_strjoin("0x", hex_str);
+		free (hex_str);
 		if (formated_hex == NULL)
 			return (-1);
 	}
 	num_bytes = ft_iputstr_fd(formated_hex, fd);
-	free(formated_hex);
-	return (num_bytes);
+	return (free(formated_hex), num_bytes);
 }

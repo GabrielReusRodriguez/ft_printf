@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_padding_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_width_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 12:06:09 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/11 22:53:43 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/12 00:27:40 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,16 @@
 #include "libft.h"
 #include "ft_printf_bonus.h"
 
-#include <stdio.h>
 /*
 If we geet precision with numeric conversion, zero flag is ignored.
 */
-int	ft_format_padding(t_format format, char **str, bool sign_print)
+int	ft_format_width(t_format format, char **str, bool sign_print)
 {
 	char	*padding;
 	char	*formated_str;
 	int		len;
 	char	padding_char;
 
-	//if (ft_strchr(NUMERIC_CONVERSION, format.c_conv_type) != NULL && format.b_dot)
-	//	format.b_zero = false;
 	if (format.n_width > 0)
 	{
 		if (format.b_zero)
@@ -39,6 +36,33 @@ int	ft_format_padding(t_format format, char **str, bool sign_print)
 			len++;
 		if ((int)format.n_width - len <= 0)
 			return (0);
+		if (ft_add_padding(format, str, padding_char, len) < 0)
+			return (-1);
+	}
+	return (0);
+}
+
+/*
+int	ft_format_width(t_format format, char **str, bool sign_print)
+{
+	char	*padding;
+	char	*formated_str;
+	int		len;
+	char	padding_char;
+
+	if (format.n_width > 0)
+	{
+		if (format.b_zero)
+			padding_char = '0';
+		else
+			padding_char = ' ';
+		len = ft_strlen(*str);
+		if (sign_print)
+			len++;
+		if ((int)format.n_width - len <= 0)
+			return (0);
+		//ft_add_padding(t_format format, char **str, char padding_char, int len)
+
 		padding = ft_calloc(sizeof(char), format.n_width + 1 - len);
 		if (padding == NULL)
 			return (-1);
@@ -55,3 +79,4 @@ int	ft_format_padding(t_format format, char **str, bool sign_print)
 	}
 	return (0);
 }
+*/

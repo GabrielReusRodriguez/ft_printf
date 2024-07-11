@@ -248,9 +248,9 @@ int main(void)
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
   */     
-    value = printf("%5c", '\0');
+    value = printf("%-20p\n", "NULL");
     fflush(stdout);
-    ft_value = ft_printf("%5c", '\0');
+    ft_value = ft_printf("%20p\n", "NULL");
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);

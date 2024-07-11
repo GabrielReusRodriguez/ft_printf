@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 19:34:00 by gabriel           #+#    #+#             */
-/*   Updated: 2024/07/11 22:54:21 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/12 00:30:26 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,20 @@ static int	ft_format_string_precision(t_format format, char **str)
 		if (formated_str == NULL)
 			return (-1);
 		free (*str);
-		*str= formated_str;
+		*str = formated_str;
 	}
+	return (0);
+}
+
+static int	ft_create_empty_str(char **str)
+{
+	char	*formated_str;
+
+	formated_str = ft_strdup("");
+	if (formated_str == NULL)
+		return (-1);
+	free (*str);
+	*str = formated_str;
 	return (0);
 }
 
@@ -43,47 +55,30 @@ static int	ft_format_numeric_precision(t_format format, char **str)
 	char	*formated_str;
 	int		len;
 
-	format.b_zero = true;
-	format.b_minus = false;	
+	padding_char = ' ';
 	if (format.n_precision >= 0)
 	{
-		if (ft_strcmp(*str,"0") == 0 && format.n_precision == 0)
-		{
-			formated_str = ft_strdup("");
-			if (formated_str == NULL)
-				return (-1);
-			free (*str);
-			*str = formated_str;
-			return (0);	
-		}
+		if (ft_strcmp(*str, "0") == 0 && format.n_precision == 0)
+			return (ft_create_empty_str(str));
 		if (format.b_zero)
 			padding_char = '0';
-		else
-			padding_char = ' ';
 		len = ft_strlen(*str);
 		if ((int)format.n_precision - len <= 0)
 			return (0);
-		padding = ft_calloc(sizeof(char), format.n_precision + 1 - len);
-		if (padding == NULL)
+		if (ft_add_padding(format, str, padding_char, len) < 0)
 			return (-1);
-		ft_memset(padding, padding_char, format.n_precision - len);
-		if (format.b_minus)
-			formated_str = ft_strjoin(*str, padding);
-		else
-			formated_str = ft_strjoin(padding, *str);
-		free (padding);
-		if (formated_str == NULL)
-			return (-1);
-		free (*str);
-		*str = formated_str;
 	}
-	return (0);	
+	return (0);
 }
 
 int	ft_format_precision(t_format format, char **str)
 {
 	if (ft_strchr(NUMERIC_CONVERSION, format.c_conv_type) != NULL)
+	{
+		format.b_zero = true;
+		format.b_minus = false;
 		return (ft_format_numeric_precision(format, str));
+	}
 	if (ft_strchr("s", format.c_conv_type) != NULL)
 		return (ft_format_string_precision(format, str));
 	return (0);
