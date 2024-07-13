@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:14:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/12 00:33:16 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/14 01:12:30 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,12 +79,11 @@ static int	ft_format_prefix(int value, t_format format, char **num)
 	That cases are negative or with sign space or plus*/
 static int	ft_format(t_format format, int arg_value, char **num)
 {
-	if (format.b_dot)
-	{
+	if (format.b_dot || format.b_minus)
 		format.b_zero = false;
+	if (format.b_dot)
 		if (ft_format_precision(format, num) < 0)
 			return (-1);
-	}
 	if (format.b_zero)
 	{
 		if (ft_format_width(format, num, arg_value < 0 || format.b_space \

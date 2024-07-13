@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:49 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/14 00:28:23 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/14 01:13:24 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 static int	ft_format(t_format format, char **str)
 {
-	if (format.b_dot)
+	if (format.b_dot || format.b_minus)
 		format.b_zero = false;
 	if (ft_format_precision(format, str) < 0)
 		return (-1);

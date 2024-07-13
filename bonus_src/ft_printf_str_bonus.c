@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:09:17 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/14 00:14:17 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/14 01:17:17 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static	int	ft_format(t_format format, char **str)
 	format.b_zero = false;
 	format.b_space = false;
 	format.b_plus = false;
+	format.b_hash = false;
 	if (ft_format_precision(format, str) < 0)
 		return (-1);
 	if (ft_format_width(format, str, false) < 0)

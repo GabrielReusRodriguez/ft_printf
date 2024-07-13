@@ -287,9 +287,9 @@ int main(void)
     printf("value = %d vs ft_value %d \n",value, ft_value);
  */
  
-    value = printf("%.5s%7s\n", "yo", "boi");
+    value = printf("% s\n","12345678");
     fflush(stdout);
-    ft_value = ft_printf("%.5s%7s\n", "yo", "boi");
+    ft_value = ft_printf("% s\n","12345678");
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);

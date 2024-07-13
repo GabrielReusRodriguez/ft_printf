@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:04:23 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/13 23:41:15 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/14 01:02:33 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int	ft_printf_char(int fd, va_list argp, t_format format)
 	int		num_bytes;
 
 	format.b_zero = false;
+	format.b_space = false;
+	format.b_dot =  false;
 	c = va_arg(argp, int);
 	str = ft_calloc(sizeof(char), 2);
 	if (str == NULL)
