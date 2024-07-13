@@ -248,12 +248,14 @@ int main(void)
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
   */     
+ /*
     value = printf("%-20p\n", "NULL");
     fflush(stdout);
     ft_value = ft_printf("%20p\n", "NULL");
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
+*/
 /*
     value = printf("%i\n", -54);
     fflush(stdout);
@@ -284,5 +286,13 @@ int main(void)
     ft_value = ft_printf("_%-05%_");
     printf("value = %d vs ft_value %d \n",value, ft_value);
  */
+ 
+    value = printf("%.5s%7s\n", "yo", "boi");
+    fflush(stdout);
+    ft_value = ft_printf("%.5s%7s\n", "yo", "boi");
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
     return (0);
 }

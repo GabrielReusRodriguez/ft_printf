@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:04:23 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/12 00:34:33 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/13 23:41:15 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,14 @@ static	int	ft_format(t_format format, char **str)
 
 /*Sign flags + and space do not have sense with char . 
 	When we compile it gives you a "warning"*/
+/* Zero lag  does not have sense in char*/
 int	ft_printf_char(int fd, va_list argp, t_format format)
 {
 	char	c;
 	char	*str;
 	int		num_bytes;
 
-	(void)format;
+	format.b_zero = false;
 	c = va_arg(argp, int);
 	str = ft_calloc(sizeof(char), 2);
 	if (str == NULL)

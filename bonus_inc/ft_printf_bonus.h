@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:57:57 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/12 00:40:05 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/14 00:16:27 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,8 @@ void		*ft_format_get(char const *str, t_format *format);
 
 int			ft_format_width(t_format format, char **str, bool sign_print);
 int			ft_format_precision(t_format format, char **str);
+int			ft_add_padding(t_format format, char **str, int padding_len, \
+				int str_len);
+
 
 #endif

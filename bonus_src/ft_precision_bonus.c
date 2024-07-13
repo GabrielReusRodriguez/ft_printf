@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 19:34:00 by gabriel           #+#    #+#             */
-/*   Updated: 2024/07/12 00:30:26 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/14 00:23:25 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,22 +50,16 @@ because we have to add zeros to the left (less significant numbers)*/
 /*Special case %.d with value 0 is an empty string*/
 static int	ft_format_numeric_precision(t_format format, char **str)
 {
-	char	padding_char;
-	char	*padding;
-	char	*formated_str;
 	int		len;
 
-	padding_char = ' ';
 	if (format.n_precision >= 0)
 	{
 		if (ft_strcmp(*str, "0") == 0 && format.n_precision == 0)
 			return (ft_create_empty_str(str));
-		if (format.b_zero)
-			padding_char = '0';
 		len = ft_strlen(*str);
 		if ((int)format.n_precision - len <= 0)
 			return (0);
-		if (ft_add_padding(format, str, padding_char, len) < 0)
+		if (ft_add_padding(format, str, format.n_precision, len) < 0)
 			return (-1);
 	}
 	return (0);
