@@ -12,8 +12,8 @@ OBJ_DIR	= ./obj
 SRC_DIR	= ./src
 INC_DIR	= ./inc
 
-BONUS_SRC_DIR	= ./src
-BONUS_INC_DIR	= ./inc
+BONUS_SRC_DIR	= ./bonus_src
+BONUS_INC_DIR	= ./bonus_inc
 
 LIBFT_DIR		= ./libft
 LIBFT_INC_DIR	= ${LIBFT_DIR}/inc
@@ -60,15 +60,24 @@ BONUS_DEP = $(addprefix ${OBJ_DIR}/, $(addsuffix .d, ${BONUS_SRC_FILES}))
 
 all: ${NAME}
 
+ifndef BONUS
+#${NAME} : ${LIBFT_LIB} ${OBJ}
+#	cp ${LIBFT_LIB} $@ 
+#	ar -csr $@ ${OBJ} 
+#${NAME} : ${LIBFT_LIB} ${BONUS_OBJ} 
+#	cp ${LIBFT_LIB} $@
+#	ar -csr $@ ${BONUS_OBJ}
+else
 ${NAME} : ${LIBFT_LIB} ${BONUS_OBJ} 
 	cp ${LIBFT_LIB} $@
 	ar -csr $@ ${BONUS_OBJ} 
+endif
 
 libft:
 	make -C ${LIBFT_DIR} --no-print-directory
 
 bonus: 
-	@make --no-print-directory
+	@make BONUS=1 --no-print-directory
 
 ${LIBFT_LIB}:
 	make -C ${LIBFT_DIR} --no-print-directory

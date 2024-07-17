@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:52:41 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/14 01:11:22 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/18 00:12:20 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@
 
 /*Sign flags + and space do not have sense with hex . 
 	When we compile it gives you a "warning"*/
+/* Hex only works with unsigned values so negatives are 0*/
+/*
+	Hex in case of 0, we do not have to put an 0x0.
+*/
 static int	ft_format_hashtag(bool up_case, t_format format, char **str)
 {
 	char	*new_str;
@@ -37,12 +41,14 @@ static int	ft_format_hashtag(bool up_case, t_format format, char **str)
 	return (0);
 }
 
-static int	ft_format(t_format format, char **str, bool up_case)
+static int	ft_format(t_format format, char **str, unsigned long number, \
+				bool up_case)
 {
 	if (format.b_dot || format.b_minus)
 		format.b_zero = false;
-	if (ft_format_hashtag(up_case, format, str) < 0)
-		return (-1);
+	if (number != 0)
+		if (ft_format_hashtag(up_case, format, str) < 0)
+			return (-1);
 	if (ft_format_precision(format, str) < 0)
 		return (-1);
 	if (ft_format_width(format, str, false) < 0)
@@ -58,7 +64,7 @@ int	ft_printf_hex(int fd, unsigned long number, bool up_case, t_format format)
 	str = ft_htoa(number, up_case);
 	if (str == NULL)
 		return (-1);
-	if (ft_format(format, &str, up_case) < 0)
+	if (ft_format(format, &str, number, up_case) < 0)
 		return (free(str), -1);
 	num_bytes = ft_iputstr_fd(str, fd);
 	free (str);

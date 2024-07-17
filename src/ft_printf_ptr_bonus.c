@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:19:39 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/14 00:49:11 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/17 22:35:32 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "libft.h"
 #include "ft_printf_bonus.h"
 
-static int ft_format(t_format format, char **ptr)
+static int	ft_format(t_format format, char **ptr)
 {
 	if (ft_format_precision(format, ptr) < 0)
 		return (-1);
@@ -26,11 +26,11 @@ static int ft_format(t_format format, char **ptr)
 	return (0);
 }
 
-static char	*ft_get_formated_hex(void * ptr)
+static char	*ft_get_formated_hex(void *ptr)
 {
 	char	*formated_hex;
 	char	*hex_str;
-	
+
 	if (ptr == NULL)
 	{
 		formated_hex = ft_strdup("(nil)");
@@ -47,7 +47,7 @@ static char	*ft_get_formated_hex(void * ptr)
 		if (formated_hex == NULL)
 			return (NULL);
 	}
-	return(formated_hex);
+	return (formated_hex);
 }
 
 /*Sign flags + and space do not have sense with PTR . 

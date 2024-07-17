@@ -287,12 +287,61 @@ int main(void)
     printf("value = %d vs ft_value %d \n",value, ft_value);
  */
  
-    value = printf("% s\n","12345678");
+/*
+     value = printf("%5c\n", '\0');
     fflush(stdout);
-    ft_value = ft_printf("% s\n","12345678");
+    ft_value = ft_printf("%5c\n", '\0');
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+*/
+
+    value = printf(" %#x \n", 0);
+    fflush(stdout);
+    ft_value = ft_printf(" %#x \n", 0);
     fflush(stdout);
     printf("value = %d vs ft_value %d \n",value, ft_value);
     fflush(stdout);
 
+
+//    value = printf(" %#x \n", LONG_MIN);
+    value = printf(" %#x \n", LONG_MIN);
+    fflush(stdout);
+    ft_value = ft_printf(" %#x \n", LONG_MIN);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+    value = printf(" %#x %#x %#x %#x %#x %#x %#x\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+    fflush(stdout);
+    ft_value = ft_printf(" %#x %#x %#x %#x %#x %#x %#x\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+
+//	TEST(1, print(" %#x ", 0));
+ //   TEST(25, print(" %#x ", LONG_MIN));
+ //   TEST(29, print(" %#x %#x %#x %#x %#x %#x %#x", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42));
+    //TEST(31, print(" %#X ", 0));
+
+/*
+    value = printf(" %c %c %c \n", '0', 0, '1');
+    fflush(stdout);
+    ft_value = ft_printf(" %c %c %c \n", '0', 0, '1');
+    fflush(stdout);
+    printf("value = %d vs ft_value %d \n",value, ft_value);
+    fflush(stdout);
+
+    ft_printf("%-1c\n", '0');
+    	ft_printf(" %-2c \n", '0');
+    	ft_printf(" %-3c\n", '0' - 256);
+    	ft_printf("%-4c \n", '0' + 256);
+    	ft_printf(" %-1c %-2c %-3c \n", '0', 0, '1');
+	ft_printf(" %-1c %-2c %-3c \n", ' ', ' ', ' ');
+	    ft_printf(" %-1c %-2c %-3c \n", '1', '2', '3');
+	    ft_printf(" %-1c %-2c %-3c \n", '2', '1', 0);
+	ft_printf(" %-1c %-2c %-3c \n", 0, '1', '2');
+*/
     return (0);
 }

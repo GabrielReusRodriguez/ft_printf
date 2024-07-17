@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_percent_bonus.c                          :+:      :+:    :+:   */
+/*   ft_printf_up_hex_bonus.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 19:19:36 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/12 00:34:45 by gabriel          ###   ########.fr       */
+/*   Created: 2024/01/10 19:19:46 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/07/12 00:35:05 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
-#include "libft.h"
 #include "ft_printf_bonus.h"
 
-/*Sign flags + and space do not have sense with percent . 
+/*Sign flags + and space do not have sense with low hex . 
 	When we compile it gives you a "warning"*/
-int	ft_printf_percent(int fd, t_format format)
+/*Hashtag flag is treated at ft_print_hex*/
+int	ft_printf_up_hex(int fd, va_list argp, t_format format)
 {
-	char	*str;
+	int				num_bytes;
+	unsigned int	arg;
 
-	(void)format;
-	str = ft_strdup("%");
-	if (str == NULL)
-		return (-1);
-	return (ft_iputstr_fd(str, fd));
+	arg = va_arg(argp, unsigned int);
+	num_bytes = ft_printf_hex(fd, arg, true, format);
+	return (num_bytes);
 }

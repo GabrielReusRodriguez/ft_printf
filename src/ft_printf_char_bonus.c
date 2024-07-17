@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:04:23 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/07/14 01:02:33 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/17 23:58:04 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 static	int	ft_format(t_format format, char **str)
 {
-	if (ft_format_width(format, str, false) < 0)
+	if (ft_format_width(format, str, true) < 0)
 		return (-1);
 	if (ft_format_precision(format, str) < 0)
 		return (-1);
@@ -28,7 +28,12 @@ static	int	ft_format(t_format format, char **str)
 
 /*Sign flags + and space do not have sense with char . 
 	When we compile it gives you a "warning"*/
-/* Zero lag  does not have sense in char*/
+/* Zero flag  does not have sense in char*/
+/*
+	We generate the padding and we print char and padding 
+	separated becasue ft_putstr prints string until \0
+	and \0 could be an char passed by arg.
+*/
 int	ft_printf_char(int fd, va_list argp, t_format format)
 {
 	char	c;
@@ -37,15 +42,22 @@ int	ft_printf_char(int fd, va_list argp, t_format format)
 
 	format.b_zero = false;
 	format.b_space = false;
-	format.b_dot =  false;
+	format.b_dot = false;
 	c = va_arg(argp, int);
-	str = ft_calloc(sizeof(char), 2);
+	str = ft_calloc(sizeof(char), 1);
 	if (str == NULL)
 		return (-1);
-	str[0] = c;
 	if (ft_format(format, &str) < 0)
 		return (free (str), -1);
-	num_bytes = ft_iputstr_fd(str, fd);
-	free (str);
-	return (num_bytes);
+	if (format.b_minus)
+	{
+		num_bytes = ft_iputchar_fd(c, fd);
+		num_bytes += ft_iputstr_fd(str, fd);
+	}
+	else
+	{
+		num_bytes = ft_iputstr_fd(str, fd);
+		num_bytes += ft_iputchar_fd(c, fd);
+	}
+	return (free (str), num_bytes);
 }

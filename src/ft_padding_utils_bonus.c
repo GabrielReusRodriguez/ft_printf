@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 00:04:16 by gabriel           #+#    #+#             */
-/*   Updated: 2024/07/14 00:16:04 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/07/17 22:34:43 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_add_padding(t_format format, char **str, int padding_len, int str_len)
 	char	padding_char;
 
 	padding_char = ' ';
-	if(format.b_zero)
-		padding_char  = '0';
+	if (format.b_zero)
+		padding_char = '0';
 	padding = ft_calloc(sizeof(char), padding_len + 1 - str_len);
 	if (padding == NULL)
 		return (-1);
